@@ -1869,3 +1869,21 @@ Using generated security password: aea80906-550c-4909-9096-8104b722bbac
 [2019-05-16 13:00:05 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-6] [384] [DEBUG] Done inserting collection: 1 rows inserted
 [2019-05-16 13:00:05 ] [org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl] [http-nio-8080-exec-6] [183] [DEBUG] HHH000420: Closing un-released batch
 [2019-05-16 13:00:18 ] [pl.coderslab.mainController.MainPageController] [http-nio-8080-exec-10] [18] [INFO ] **** WYWOŁANO > showMainPage()
+[2019-05-16 13:11:01 ] [org.springframework.context.support.AbstractApplicationContext] [Thread-9] [993] [INFO ] Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@ad436d: startup date [Thu May 16 12:59:32 EDT 2019]; root of context hierarchy
+[2019-05-16 13:11:01 ] [org.springframework.jmx.export.MBeanExporter] [Thread-9] [451] [INFO ] Unregistering JMX-exposed beans on shutdown
+[2019-05-16 13:11:01 ] [org.springframework.jmx.support.MBeanRegistrationSupport] [Thread-9] [185] [INFO ] Unregistering JMX-exposed beans
+[2019-05-16 13:11:01 ] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [Thread-9] [597] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2019-05-16 13:11:01 ] [org.hibernate.internal.SessionFactoryImpl] [Thread-9] [741] [DEBUG] HHH000031: Closing
+[2019-05-16 13:11:01 ] [org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl] [Thread-9] [524] [INFO ] HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+[2019-05-16 13:11:01 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [Thread-9] [92] [DEBUG] drop table car if exists
+[2019-05-16 13:11:01 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [Thread-9] [92] [DEBUG] drop table client if exists
+[2019-05-16 13:11:01 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [Thread-9] [92] [DEBUG] drop table role if exists
+[2019-05-16 13:11:01 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [Thread-9] [92] [DEBUG] drop table user if exists
+[2019-05-16 13:11:01 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [Thread-9] [92] [DEBUG] drop table user_role if exists
+[2019-05-16 13:11:01 ] [org.hibernate.engine.spi.CascadeStyles] [Thread-9] [268] [DEBUG] External cascade style registration [persist : STYLE_PERSIST] overrode base registration [STYLE_PERSIST_SKIPLAZY]
+[2019-05-16 13:11:01 ] [org.hibernate.service.internal.AbstractServiceRegistryImpl] [Thread-9] [414] [DEBUG] Implicitly destroying ServiceRegistry on de-registration of all child ServiceRegistries
+[2019-05-16 13:11:01 ] [org.hibernate.boot.registry.internal.BootstrapServiceRegistryImpl] [Thread-9] [295] [DEBUG] Implicitly destroying Boot-strap registry on de-registration of all child ServiceRegistries
+[2019-05-16 13:11:01 ] [org.springframework.beans.factory.support.DisposableBeanAdapter] [Thread-9] [265] [WARN ] Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Baza danych jest już zamknięta (aby zablokować samoczynne zamykanie podczas zamknięcia VM dodaj ";DB_CLOSE_ON_EXIT=FALSE" do URL bazy danych)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-199]
+[2019-05-16 13:11:01 ] [com.zaxxer.hikari.HikariDataSource] [Thread-9] [381] [INFO ] HikariPool-1 - Shutdown initiated...
+[2019-05-16 13:11:02 ] [com.zaxxer.hikari.HikariDataSource] [Thread-9] [383] [INFO ] HikariPool-1 - Shutdown completed.
