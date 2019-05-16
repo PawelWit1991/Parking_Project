@@ -1,0 +1,9 @@
+pl/coderslab/configuration/WebMvcConfig.class
+pl/coderslab/configuration/SecurityConfig.class
+pl/coderslab/user/RegisterController.class
+pl/coderslab/ServletInitializer.class
+pl/coderslab/mainController/ErrorPageController.class
+pl/coderslab/user/User.class
+pl/coderslab/mainController/LoginPageController.class
+pl/coderslab/AppdemoApplication.class
+pl/coderslab/mainController/MainPageController.class

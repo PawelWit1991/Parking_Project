@@ -1,0 +1,9 @@
+/home/pawel/17Kwiecien/src/main/java/pl/coderslab/AppdemoApplication.java
+/home/pawel/17Kwiecien/src/main/java/pl/coderslab/ServletInitializer.java
+/home/pawel/17Kwiecien/src/main/java/pl/coderslab/mainController/LoginPageController.java
+/home/pawel/17Kwiecien/src/main/java/pl/coderslab/user/User.java
+/home/pawel/17Kwiecien/src/main/java/pl/coderslab/user/RegisterController.java
+/home/pawel/17Kwiecien/src/main/java/pl/coderslab/configuration/WebMvcConfig.java
+/home/pawel/17Kwiecien/src/main/java/pl/coderslab/configuration/SecurityConfig.java
+/home/pawel/17Kwiecien/src/main/java/pl/coderslab/mainController/MainPageController.java
+/home/pawel/17Kwiecien/src/main/java/pl/coderslab/mainController/ErrorPageController.java

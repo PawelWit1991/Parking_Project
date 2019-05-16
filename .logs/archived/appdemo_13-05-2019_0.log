@@ -1,0 +1,1126 @@
+[2019-05-13 18:43:58 ] [org.apache.juli.logging.DirectJDKLog] [http-nio-8080-exec-1] [180] [INFO ] Initializing Spring FrameworkServlet 'dispatcherServlet'
+[2019-05-13 18:43:58 ] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-1] [494] [INFO ] FrameworkServlet 'dispatcherServlet': initialization started
+[2019-05-13 18:43:58 ] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-1] [509] [INFO ] FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
+[2019-05-13 18:44:22 ] [pl.coderslab.mainController.MainPageController] [http-nio-8080-exec-6] [18] [INFO ] **** WYWOŁANO > showMainPage()
+[2019-05-13 18:44:34 ] [pl.coderslab.mainController.MainPageController] [http-nio-8080-exec-4] [18] [INFO ] **** WYWOŁANO > showMainPage()
+[2019-05-13 18:45:00 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-5] [55] [DEBUG] begin
+[2019-05-13 18:45:00 ] [org.hibernate.query.criteria.internal.CriteriaQueryImpl] [http-nio-8080-exec-5] [307] [DEBUG] Rendered criteria query -> select generatedAlias0 from User as generatedAlias0 where generatedAlias0.email=:param0
+[2019-05-13 18:45:00 ] [org.hibernate.hql.internal.ast.QueryTranslatorImpl] [http-nio-8080-exec-5] [282] [DEBUG] parse() - HQL: select generatedAlias0 from pl.coderslab.user.User as generatedAlias0 where generatedAlias0.email=:param0
+[2019-05-13 18:45:00 ] [org.hibernate.hql.internal.ast.ErrorCounter] [http-nio-8080-exec-5] [95] [DEBUG] throwQueryException() : no errors
+[2019-05-13 18:45:00 ] [org.hibernate.hql.internal.ast.QueryTranslatorImpl] [http-nio-8080-exec-5] [305] [DEBUG] --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    +-[SELECT_FROM] Node: 'SELECT_FROM'
+    |  +-[FROM] Node: 'from'
+    |  |  \-[RANGE] Node: 'RANGE'
+    |  |     +-[DOT] Node: '.'
+    |  |     |  +-[DOT] Node: '.'
+    |  |     |  |  +-[DOT] Node: '.'
+    |  |     |  |  |  +-[IDENT] Node: 'pl'
+    |  |     |  |  |  \-[IDENT] Node: 'coderslab'
+    |  |     |  |  \-[IDENT] Node: 'user'
+    |  |     |  \-[IDENT] Node: 'User'
+    |  |     \-[ALIAS] Node: 'generatedAlias0'
+    |  \-[SELECT] Node: 'select'
+    |     \-[IDENT] Node: 'generatedAlias0'
+    \-[WHERE] Node: 'where'
+       \-[EQ] Node: '='
+          +-[DOT] Node: '.'
+          |  +-[IDENT] Node: 'generatedAlias0'
+          |  \-[IDENT] Node: 'email'
+          \-[COLON] Node: ':'
+             \-[IDENT] Node: 'param0'
+
+[2019-05-13 18:45:00 ] [org.hibernate.hql.internal.antlr.HqlSqlBaseWalker] [http-nio-8080-exec-5] [124] [DEBUG] select << begin [level=1, statement=select]
+[2019-05-13 18:45:00 ] [org.hibernate.hql.internal.ast.tree.FromElement] [http-nio-8080-exec-5] [147] [DEBUG] FromClause{level=1} : pl.coderslab.user.User (generatedAlias0) -> user0_
+[2019-05-13 18:45:00 ] [org.hibernate.hql.internal.ast.tree.FromReferenceNode] [http-nio-8080-exec-5] [60] [DEBUG] Resolved : generatedAlias0 -> user0_.user_id
+[2019-05-13 18:45:00 ] [org.hibernate.hql.internal.ast.tree.FromReferenceNode] [http-nio-8080-exec-5] [60] [DEBUG] Resolved : generatedAlias0 -> user0_.user_id
+[2019-05-13 18:45:00 ] [org.hibernate.hql.internal.ast.tree.DotNode] [http-nio-8080-exec-5] [688] [DEBUG] getDataType() : email -> org.hibernate.type.StringType@3f632683
+[2019-05-13 18:45:00 ] [org.hibernate.hql.internal.ast.tree.FromReferenceNode] [http-nio-8080-exec-5] [60] [DEBUG] Resolved : generatedAlias0.email -> user0_.email
+[2019-05-13 18:45:00 ] [org.hibernate.hql.internal.antlr.HqlSqlBaseWalker] [http-nio-8080-exec-5] [128] [DEBUG] select : finishing up [level=1, statement=select]
+[2019-05-13 18:45:00 ] [org.hibernate.hql.internal.ast.HqlSqlWalker] [http-nio-8080-exec-5] [747] [DEBUG] processQuery() :  ( SELECT ( {select clause} user0_.user_id ) ( FromClause{level=1} user user0_ ) ( where ( = ( user0_.email user0_.user_id email ) ? ) ) )
+[2019-05-13 18:45:00 ] [org.hibernate.hql.internal.ast.util.JoinProcessor] [http-nio-8080-exec-5] [192] [DEBUG] Using FROM fragment [user user0_]
+[2019-05-13 18:45:00 ] [org.hibernate.hql.internal.antlr.HqlSqlBaseWalker] [http-nio-8080-exec-5] [132] [DEBUG] select >> end [level=1, statement=select]
+[2019-05-13 18:45:00 ] [org.hibernate.hql.internal.ast.QueryTranslatorImpl] [http-nio-8080-exec-5] [269] [DEBUG] --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (user)
+    +-[SELECT_CLAUSE] SelectClause: '{select clause}'
+    |  +-[ALIAS_REF] IdentNode: 'user0_.user_id as user_id1_3_' {alias=generatedAlias0, className=pl.coderslab.user.User, tableAlias=user0_}
+    |  \-[SQL_TOKEN] SqlFragment: 'user0_.activation_code as activati2_3_, user0_.active as active3_3_, user0_.email as email4_3_, user0_.last_name as last_nam5_3_, user0_.name as name6_3_, user0_.password as password7_3_'
+    +-[FROM] FromClause: 'from' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[generatedAlias0], fromElementByTableAlias=[user0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+    |  \-[FROM_FRAGMENT] FromElement: 'user user0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=generatedAlias0,role=null,tableName=user,tableAlias=user0_,origin=null,columns={,className=pl.coderslab.user.User}}
+    \-[WHERE] SqlNode: 'where'
+       \-[EQ] BinaryLogicOperatorNode: '='
+          +-[DOT] DotNode: 'user0_.email' {propertyName=email,dereferenceType=PRIMITIVE,getPropertyPath=email,path=generatedAlias0.email,tableAlias=user0_,className=pl.coderslab.user.User,classAlias=generatedAlias0}
+          |  +-[ALIAS_REF] IdentNode: 'user0_.user_id' {alias=generatedAlias0, className=pl.coderslab.user.User, tableAlias=user0_}
+          |  \-[IDENT] IdentNode: 'email' {originalText=email}
+          \-[NAMED_PARAM] ParameterNode: '?' {name=param0, expectedType=org.hibernate.type.StringType@3f632683}
+
+[2019-05-13 18:45:00 ] [org.hibernate.hql.internal.ast.ErrorCounter] [http-nio-8080-exec-5] [95] [DEBUG] throwQueryException() : no errors
+[2019-05-13 18:45:00 ] [org.hibernate.hql.internal.ast.QueryTranslatorImpl] [http-nio-8080-exec-5] [251] [DEBUG] HQL: select generatedAlias0 from pl.coderslab.user.User as generatedAlias0 where generatedAlias0.email=:param0
+[2019-05-13 18:45:00 ] [org.hibernate.hql.internal.ast.QueryTranslatorImpl] [http-nio-8080-exec-5] [252] [DEBUG] SQL: select user0_.user_id as user_id1_3_, user0_.activation_code as activati2_3_, user0_.active as active3_3_, user0_.email as email4_3_, user0_.last_name as last_nam5_3_, user0_.name as name6_3_, user0_.password as password7_3_ from user user0_ where user0_.email=?
+[2019-05-13 18:45:00 ] [org.hibernate.hql.internal.ast.ErrorCounter] [http-nio-8080-exec-5] [95] [DEBUG] throwQueryException() : no errors
+[2019-05-13 18:45:00 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-5] [92] [DEBUG] select user0_.user_id as user_id1_3_, user0_.activation_code as activati2_3_, user0_.active as active3_3_, user0_.email as email4_3_, user0_.last_name as last_nam5_3_, user0_.name as name6_3_, user0_.password as password7_3_ from user user0_ where user0_.email=?
+[2019-05-13 18:45:00 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-5] [66] [DEBUG] committing
+[2019-05-13 18:45:00 ] [pl.coderslab.olc.RegisterController] [http-nio-8080-exec-5] [62] [INFO ] #### User before SAVE: User{id=0, email='wit_pawel1991@o2.pl', password='Misiak12!', name='Paweł', lastName='Kowalski', active=0, roles=null, nrRoli=0, newPassword='null', activationCode='null'}
+[2019-05-13 18:45:00 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-5] [55] [DEBUG] begin
+[2019-05-13 18:45:00 ] [org.hibernate.query.criteria.internal.CriteriaQueryImpl] [http-nio-8080-exec-5] [307] [DEBUG] Rendered criteria query -> select generatedAlias0 from Role as generatedAlias0 where generatedAlias0.role=:param0
+[2019-05-13 18:45:00 ] [org.hibernate.hql.internal.ast.QueryTranslatorImpl] [http-nio-8080-exec-5] [282] [DEBUG] parse() - HQL: select generatedAlias0 from pl.coderslab.user.Role as generatedAlias0 where generatedAlias0.role=:param0
+[2019-05-13 18:45:00 ] [org.hibernate.hql.internal.ast.ErrorCounter] [http-nio-8080-exec-5] [95] [DEBUG] throwQueryException() : no errors
+[2019-05-13 18:45:00 ] [org.hibernate.hql.internal.ast.QueryTranslatorImpl] [http-nio-8080-exec-5] [305] [DEBUG] --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    +-[SELECT_FROM] Node: 'SELECT_FROM'
+    |  +-[FROM] Node: 'from'
+    |  |  \-[RANGE] Node: 'RANGE'
+    |  |     +-[DOT] Node: '.'
+    |  |     |  +-[DOT] Node: '.'
+    |  |     |  |  +-[DOT] Node: '.'
+    |  |     |  |  |  +-[IDENT] Node: 'pl'
+    |  |     |  |  |  \-[IDENT] Node: 'coderslab'
+    |  |     |  |  \-[IDENT] Node: 'user'
+    |  |     |  \-[IDENT] Node: 'Role'
+    |  |     \-[ALIAS] Node: 'generatedAlias0'
+    |  \-[SELECT] Node: 'select'
+    |     \-[IDENT] Node: 'generatedAlias0'
+    \-[WHERE] Node: 'where'
+       \-[EQ] Node: '='
+          +-[DOT] Node: '.'
+          |  +-[IDENT] Node: 'generatedAlias0'
+          |  \-[IDENT] Node: 'role'
+          \-[COLON] Node: ':'
+             \-[IDENT] Node: 'param0'
+
+[2019-05-13 18:45:00 ] [org.hibernate.hql.internal.antlr.HqlSqlBaseWalker] [http-nio-8080-exec-5] [124] [DEBUG] select << begin [level=1, statement=select]
+[2019-05-13 18:45:00 ] [org.hibernate.hql.internal.ast.tree.FromElement] [http-nio-8080-exec-5] [147] [DEBUG] FromClause{level=1} : pl.coderslab.user.Role (generatedAlias0) -> role0_
+[2019-05-13 18:45:00 ] [org.hibernate.hql.internal.ast.tree.FromReferenceNode] [http-nio-8080-exec-5] [60] [DEBUG] Resolved : generatedAlias0 -> role0_.role_id
+[2019-05-13 18:45:00 ] [org.hibernate.hql.internal.ast.tree.FromReferenceNode] [http-nio-8080-exec-5] [60] [DEBUG] Resolved : generatedAlias0 -> role0_.role_id
+[2019-05-13 18:45:00 ] [org.hibernate.hql.internal.ast.tree.DotNode] [http-nio-8080-exec-5] [688] [DEBUG] getDataType() : role -> org.hibernate.type.StringType@3f632683
+[2019-05-13 18:45:00 ] [org.hibernate.hql.internal.ast.tree.FromReferenceNode] [http-nio-8080-exec-5] [60] [DEBUG] Resolved : generatedAlias0.role -> role0_.role
+[2019-05-13 18:45:00 ] [org.hibernate.hql.internal.antlr.HqlSqlBaseWalker] [http-nio-8080-exec-5] [128] [DEBUG] select : finishing up [level=1, statement=select]
+[2019-05-13 18:45:00 ] [org.hibernate.hql.internal.ast.HqlSqlWalker] [http-nio-8080-exec-5] [747] [DEBUG] processQuery() :  ( SELECT ( {select clause} role0_.role_id ) ( FromClause{level=1} role role0_ ) ( where ( = ( role0_.role role0_.role_id role ) ? ) ) )
+[2019-05-13 18:45:00 ] [org.hibernate.hql.internal.ast.util.JoinProcessor] [http-nio-8080-exec-5] [192] [DEBUG] Using FROM fragment [role role0_]
+[2019-05-13 18:45:00 ] [org.hibernate.hql.internal.antlr.HqlSqlBaseWalker] [http-nio-8080-exec-5] [132] [DEBUG] select >> end [level=1, statement=select]
+[2019-05-13 18:45:00 ] [org.hibernate.hql.internal.ast.QueryTranslatorImpl] [http-nio-8080-exec-5] [269] [DEBUG] --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (role)
+    +-[SELECT_CLAUSE] SelectClause: '{select clause}'
+    |  +-[ALIAS_REF] IdentNode: 'role0_.role_id as role_id1_2_' {alias=generatedAlias0, className=pl.coderslab.user.Role, tableAlias=role0_}
+    |  \-[SQL_TOKEN] SqlFragment: 'role0_.role as role2_2_'
+    +-[FROM] FromClause: 'from' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[generatedAlias0], fromElementByTableAlias=[role0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+    |  \-[FROM_FRAGMENT] FromElement: 'role role0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=generatedAlias0,role=null,tableName=role,tableAlias=role0_,origin=null,columns={,className=pl.coderslab.user.Role}}
+    \-[WHERE] SqlNode: 'where'
+       \-[EQ] BinaryLogicOperatorNode: '='
+          +-[DOT] DotNode: 'role0_.role' {propertyName=role,dereferenceType=PRIMITIVE,getPropertyPath=role,path=generatedAlias0.role,tableAlias=role0_,className=pl.coderslab.user.Role,classAlias=generatedAlias0}
+          |  +-[ALIAS_REF] IdentNode: 'role0_.role_id' {alias=generatedAlias0, className=pl.coderslab.user.Role, tableAlias=role0_}
+          |  \-[IDENT] IdentNode: 'role' {originalText=role}
+          \-[NAMED_PARAM] ParameterNode: '?' {name=param0, expectedType=org.hibernate.type.StringType@3f632683}
+
+[2019-05-13 18:45:00 ] [org.hibernate.hql.internal.ast.ErrorCounter] [http-nio-8080-exec-5] [95] [DEBUG] throwQueryException() : no errors
+[2019-05-13 18:45:00 ] [org.hibernate.hql.internal.ast.QueryTranslatorImpl] [http-nio-8080-exec-5] [251] [DEBUG] HQL: select generatedAlias0 from pl.coderslab.user.Role as generatedAlias0 where generatedAlias0.role=:param0
+[2019-05-13 18:45:00 ] [org.hibernate.hql.internal.ast.QueryTranslatorImpl] [http-nio-8080-exec-5] [252] [DEBUG] SQL: select role0_.role_id as role_id1_2_, role0_.role as role2_2_ from role role0_ where role0_.role=?
+[2019-05-13 18:45:00 ] [org.hibernate.hql.internal.ast.ErrorCounter] [http-nio-8080-exec-5] [95] [DEBUG] throwQueryException() : no errors
+[2019-05-13 18:45:00 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-5] [92] [DEBUG] select role0_.role_id as role_id1_2_, role0_.role as role2_2_ from role role0_ where role0_.role=?
+[2019-05-13 18:45:00 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-5] [384] [DEBUG] Result set row: 0
+[2019-05-13 18:45:00 ] [org.hibernate.loader.Loader] [http-nio-8080-exec-5] [1533] [DEBUG] Result row: EntityKey[pl.coderslab.user.Role#2]
+[2019-05-13 18:45:00 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-5] [144] [DEBUG] Resolving associations for [pl.coderslab.user.Role#2]
+[2019-05-13 18:45:00 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-5] [287] [DEBUG] Done materializing entity [pl.coderslab.user.Role#2]
+[2019-05-13 18:45:00 ] [org.hibernate.engine.spi.ActionQueue] [http-nio-8080-exec-5] [281] [DEBUG] Executing identity-insert immediately
+[2019-05-13 18:45:00 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-5] [92] [DEBUG] insert into user (user_id, activation_code, active, email, last_name, name, password) values (null, ?, ?, ?, ?, ?, ?)
+[2019-05-13 18:45:00 ] [org.hibernate.id.IdentifierGeneratorHelper] [http-nio-8080-exec-5] [78] [DEBUG] Natively generated identity: 2
+[2019-05-13 18:45:00 ] [org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl] [http-nio-8080-exec-5] [115] [DEBUG] HHH000387: ResultSet's statement was not registered
+[2019-05-13 18:45:00 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-5] [66] [DEBUG] committing
+[2019-05-13 18:45:00 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-5] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:45:00 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-5] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:45:00 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-5] [189] [DEBUG] Collection found: [pl.coderslab.user.User.roles#2], was: [<unreferenced>] (initialized)
+[2019-05-13 18:45:00 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-5] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+[2019-05-13 18:45:00 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-5] [113] [DEBUG] Flushed: 1 (re)creations, 0 updates, 0 removals to 1 collections
+[2019-05-13 18:45:00 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-5] [102] [DEBUG] Listing entities:
+[2019-05-13 18:45:00 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-5] [109] [DEBUG] pl.coderslab.user.Role{role=ROLE_USER, id=2}
+[2019-05-13 18:45:00 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-5] [109] [DEBUG] pl.coderslab.user.User{lastName=Kowalski, password=$2a$10$5jleToffvLwwyLKnXyIDGOm4K1tZU4D9NlnNrytBqkxcXyyyg30RG, roles=[pl.coderslab.user.Role#2], name=Paweł, active=1, id=2, activationCode=null, email=wit_pawel1991@o2.pl}
+[2019-05-13 18:45:00 ] [org.hibernate.persister.collection.AbstractCollectionPersister] [http-nio-8080-exec-5] [1272] [DEBUG] Inserting collection: [pl.coderslab.user.User.roles#2]
+[2019-05-13 18:45:00 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-5] [92] [DEBUG] insert into user_role (user_id, role_id) values (?, ?)
+[2019-05-13 18:45:00 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-5] [384] [DEBUG] Done inserting collection: 1 rows inserted
+[2019-05-13 18:45:00 ] [org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl] [http-nio-8080-exec-5] [183] [DEBUG] HHH000420: Closing un-released batch
+[2019-05-13 18:45:12 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-2] [55] [DEBUG] begin
+[2019-05-13 18:45:12 ] [org.hibernate.query.criteria.internal.CriteriaQueryImpl] [http-nio-8080-exec-2] [307] [DEBUG] Rendered criteria query -> select generatedAlias0 from Client as generatedAlias0
+[2019-05-13 18:45:12 ] [org.hibernate.hql.internal.ast.QueryTranslatorImpl] [http-nio-8080-exec-2] [282] [DEBUG] parse() - HQL: select generatedAlias0 from pl.coderslab.client.Client as generatedAlias0
+[2019-05-13 18:45:12 ] [org.hibernate.hql.internal.ast.ErrorCounter] [http-nio-8080-exec-2] [95] [DEBUG] throwQueryException() : no errors
+[2019-05-13 18:45:12 ] [org.hibernate.hql.internal.ast.QueryTranslatorImpl] [http-nio-8080-exec-2] [305] [DEBUG] --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    \-[SELECT_FROM] Node: 'SELECT_FROM'
+       +-[FROM] Node: 'from'
+       |  \-[RANGE] Node: 'RANGE'
+       |     +-[DOT] Node: '.'
+       |     |  +-[DOT] Node: '.'
+       |     |  |  +-[DOT] Node: '.'
+       |     |  |  |  +-[IDENT] Node: 'pl'
+       |     |  |  |  \-[IDENT] Node: 'coderslab'
+       |     |  |  \-[IDENT] Node: 'client'
+       |     |  \-[IDENT] Node: 'Client'
+       |     \-[ALIAS] Node: 'generatedAlias0'
+       \-[SELECT] Node: 'select'
+          \-[IDENT] Node: 'generatedAlias0'
+
+[2019-05-13 18:45:12 ] [org.hibernate.hql.internal.antlr.HqlSqlBaseWalker] [http-nio-8080-exec-2] [124] [DEBUG] select << begin [level=1, statement=select]
+[2019-05-13 18:45:12 ] [org.hibernate.hql.internal.ast.tree.FromElement] [http-nio-8080-exec-2] [147] [DEBUG] FromClause{level=1} : pl.coderslab.client.Client (generatedAlias0) -> client0_
+[2019-05-13 18:45:12 ] [org.hibernate.hql.internal.ast.tree.FromReferenceNode] [http-nio-8080-exec-2] [60] [DEBUG] Resolved : generatedAlias0 -> client0_.id
+[2019-05-13 18:45:12 ] [org.hibernate.hql.internal.antlr.HqlSqlBaseWalker] [http-nio-8080-exec-2] [128] [DEBUG] select : finishing up [level=1, statement=select]
+[2019-05-13 18:45:12 ] [org.hibernate.hql.internal.ast.HqlSqlWalker] [http-nio-8080-exec-2] [747] [DEBUG] processQuery() :  ( SELECT ( {select clause} client0_.id ) ( FromClause{level=1} client client0_ ) )
+[2019-05-13 18:45:12 ] [org.hibernate.hql.internal.ast.util.JoinProcessor] [http-nio-8080-exec-2] [192] [DEBUG] Using FROM fragment [client client0_]
+[2019-05-13 18:45:12 ] [org.hibernate.hql.internal.antlr.HqlSqlBaseWalker] [http-nio-8080-exec-2] [132] [DEBUG] select >> end [level=1, statement=select]
+[2019-05-13 18:45:12 ] [org.hibernate.hql.internal.ast.QueryTranslatorImpl] [http-nio-8080-exec-2] [269] [DEBUG] --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (client)
+    +-[SELECT_CLAUSE] SelectClause: '{select clause}'
+    |  +-[ALIAS_REF] IdentNode: 'client0_.id as id1_1_' {alias=generatedAlias0, className=pl.coderslab.client.Client, tableAlias=client0_}
+    |  \-[SQL_TOKEN] SqlFragment: 'client0_.firstname as firstnam2_1_, client0_.lastname as lastname3_1_'
+    \-[FROM] FromClause: 'from' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[generatedAlias0], fromElementByTableAlias=[client0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+       \-[FROM_FRAGMENT] FromElement: 'client client0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=generatedAlias0,role=null,tableName=client,tableAlias=client0_,origin=null,columns={,className=pl.coderslab.client.Client}}
+
+[2019-05-13 18:45:12 ] [org.hibernate.hql.internal.ast.ErrorCounter] [http-nio-8080-exec-2] [95] [DEBUG] throwQueryException() : no errors
+[2019-05-13 18:45:12 ] [org.hibernate.hql.internal.ast.QueryTranslatorImpl] [http-nio-8080-exec-2] [251] [DEBUG] HQL: select generatedAlias0 from pl.coderslab.client.Client as generatedAlias0
+[2019-05-13 18:45:12 ] [org.hibernate.hql.internal.ast.QueryTranslatorImpl] [http-nio-8080-exec-2] [252] [DEBUG] SQL: select client0_.id as id1_1_, client0_.firstname as firstnam2_1_, client0_.lastname as lastname3_1_ from client client0_
+[2019-05-13 18:45:12 ] [org.hibernate.hql.internal.ast.ErrorCounter] [http-nio-8080-exec-2] [95] [DEBUG] throwQueryException() : no errors
+[2019-05-13 18:45:12 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-2] [92] [DEBUG] select client0_.id as id1_1_, client0_.firstname as firstnam2_1_, client0_.lastname as lastname3_1_ from client client0_
+[2019-05-13 18:45:12 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-2] [66] [DEBUG] committing
+[2019-05-13 18:45:19 ] [pl.coderslab.mainController.MainPageController] [http-nio-8080-exec-6] [18] [INFO ] **** WYWOŁANO > showMainPage()
+[2019-05-13 18:45:23 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-8] [55] [DEBUG] begin
+[2019-05-13 18:45:23 ] [org.hibernate.query.criteria.internal.CriteriaQueryImpl] [http-nio-8080-exec-8] [307] [DEBUG] Rendered criteria query -> select generatedAlias0 from Client as generatedAlias0
+[2019-05-13 18:45:23 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-8] [92] [DEBUG] select client0_.id as id1_1_, client0_.firstname as firstnam2_1_, client0_.lastname as lastname3_1_ from client client0_
+[2019-05-13 18:45:23 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-8] [66] [DEBUG] committing
+[2019-05-13 18:45:23 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-8] [55] [DEBUG] begin
+[2019-05-13 18:45:23 ] [org.hibernate.query.criteria.internal.CriteriaQueryImpl] [http-nio-8080-exec-8] [307] [DEBUG] Rendered criteria query -> select generatedAlias0 from Car as generatedAlias0
+[2019-05-13 18:45:23 ] [org.hibernate.hql.internal.ast.QueryTranslatorImpl] [http-nio-8080-exec-8] [282] [DEBUG] parse() - HQL: select generatedAlias0 from pl.coderslab.car.Car as generatedAlias0
+[2019-05-13 18:45:23 ] [org.hibernate.hql.internal.ast.ErrorCounter] [http-nio-8080-exec-8] [95] [DEBUG] throwQueryException() : no errors
+[2019-05-13 18:45:23 ] [org.hibernate.hql.internal.ast.QueryTranslatorImpl] [http-nio-8080-exec-8] [305] [DEBUG] --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    \-[SELECT_FROM] Node: 'SELECT_FROM'
+       +-[FROM] Node: 'from'
+       |  \-[RANGE] Node: 'RANGE'
+       |     +-[DOT] Node: '.'
+       |     |  +-[DOT] Node: '.'
+       |     |  |  +-[DOT] Node: '.'
+       |     |  |  |  +-[IDENT] Node: 'pl'
+       |     |  |  |  \-[IDENT] Node: 'coderslab'
+       |     |  |  \-[IDENT] Node: 'car'
+       |     |  \-[IDENT] Node: 'Car'
+       |     \-[ALIAS] Node: 'generatedAlias0'
+       \-[SELECT] Node: 'select'
+          \-[IDENT] Node: 'generatedAlias0'
+
+[2019-05-13 18:45:23 ] [org.hibernate.hql.internal.antlr.HqlSqlBaseWalker] [http-nio-8080-exec-8] [124] [DEBUG] select << begin [level=1, statement=select]
+[2019-05-13 18:45:23 ] [org.hibernate.hql.internal.ast.tree.FromElement] [http-nio-8080-exec-8] [147] [DEBUG] FromClause{level=1} : pl.coderslab.car.Car (generatedAlias0) -> car0_
+[2019-05-13 18:45:23 ] [org.hibernate.hql.internal.ast.tree.FromReferenceNode] [http-nio-8080-exec-8] [60] [DEBUG] Resolved : generatedAlias0 -> car0_.id
+[2019-05-13 18:45:23 ] [org.hibernate.hql.internal.antlr.HqlSqlBaseWalker] [http-nio-8080-exec-8] [128] [DEBUG] select : finishing up [level=1, statement=select]
+[2019-05-13 18:45:23 ] [org.hibernate.hql.internal.ast.HqlSqlWalker] [http-nio-8080-exec-8] [747] [DEBUG] processQuery() :  ( SELECT ( {select clause} car0_.id ) ( FromClause{level=1} car car0_ ) )
+[2019-05-13 18:45:23 ] [org.hibernate.hql.internal.ast.util.JoinProcessor] [http-nio-8080-exec-8] [192] [DEBUG] Using FROM fragment [car car0_]
+[2019-05-13 18:45:23 ] [org.hibernate.hql.internal.antlr.HqlSqlBaseWalker] [http-nio-8080-exec-8] [132] [DEBUG] select >> end [level=1, statement=select]
+[2019-05-13 18:45:23 ] [org.hibernate.hql.internal.ast.QueryTranslatorImpl] [http-nio-8080-exec-8] [269] [DEBUG] --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (car)
+    +-[SELECT_CLAUSE] SelectClause: '{select clause}'
+    |  +-[ALIAS_REF] IdentNode: 'car0_.id as id1_0_' {alias=generatedAlias0, className=pl.coderslab.car.Car, tableAlias=car0_}
+    |  \-[SQL_TOKEN] SqlFragment: 'car0_.brand as brand2_0_, car0_.client_id as client_i5_0_, car0_.model as model3_0_, car0_.rejestracja as rejestra4_0_'
+    \-[FROM] FromClause: 'from' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[generatedAlias0], fromElementByTableAlias=[car0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+       \-[FROM_FRAGMENT] FromElement: 'car car0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=generatedAlias0,role=null,tableName=car,tableAlias=car0_,origin=null,columns={,className=pl.coderslab.car.Car}}
+
+[2019-05-13 18:45:23 ] [org.hibernate.hql.internal.ast.ErrorCounter] [http-nio-8080-exec-8] [95] [DEBUG] throwQueryException() : no errors
+[2019-05-13 18:45:23 ] [org.hibernate.hql.internal.ast.QueryTranslatorImpl] [http-nio-8080-exec-8] [251] [DEBUG] HQL: select generatedAlias0 from pl.coderslab.car.Car as generatedAlias0
+[2019-05-13 18:45:23 ] [org.hibernate.hql.internal.ast.QueryTranslatorImpl] [http-nio-8080-exec-8] [252] [DEBUG] SQL: select car0_.id as id1_0_, car0_.brand as brand2_0_, car0_.client_id as client_i5_0_, car0_.model as model3_0_, car0_.rejestracja as rejestra4_0_ from car car0_
+[2019-05-13 18:45:23 ] [org.hibernate.hql.internal.ast.ErrorCounter] [http-nio-8080-exec-8] [95] [DEBUG] throwQueryException() : no errors
+[2019-05-13 18:45:23 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-8] [92] [DEBUG] select car0_.id as id1_0_, car0_.brand as brand2_0_, car0_.client_id as client_i5_0_, car0_.model as model3_0_, car0_.rejestracja as rejestra4_0_ from car car0_
+[2019-05-13 18:45:23 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-8] [66] [DEBUG] committing
+[2019-05-13 18:45:23 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-8] [55] [DEBUG] begin
+[2019-05-13 18:45:23 ] [org.hibernate.query.criteria.internal.CriteriaQueryImpl] [http-nio-8080-exec-8] [307] [DEBUG] Rendered criteria query -> select generatedAlias0 from Client as generatedAlias0
+[2019-05-13 18:45:23 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-8] [92] [DEBUG] select client0_.id as id1_1_, client0_.firstname as firstnam2_1_, client0_.lastname as lastname3_1_ from client client0_
+[2019-05-13 18:45:23 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-8] [66] [DEBUG] committing
+[2019-05-13 18:45:25 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-10] [55] [DEBUG] begin
+[2019-05-13 18:45:25 ] [org.hibernate.query.criteria.internal.CriteriaQueryImpl] [http-nio-8080-exec-10] [307] [DEBUG] Rendered criteria query -> select generatedAlias0 from Client as generatedAlias0
+[2019-05-13 18:45:25 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-10] [92] [DEBUG] select client0_.id as id1_1_, client0_.firstname as firstnam2_1_, client0_.lastname as lastname3_1_ from client client0_
+[2019-05-13 18:45:25 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-10] [66] [DEBUG] committing
+[2019-05-13 18:45:25 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-10] [55] [DEBUG] begin
+[2019-05-13 18:45:25 ] [org.hibernate.query.criteria.internal.CriteriaQueryImpl] [http-nio-8080-exec-10] [307] [DEBUG] Rendered criteria query -> select generatedAlias0 from Car as generatedAlias0
+[2019-05-13 18:45:25 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-10] [92] [DEBUG] select car0_.id as id1_0_, car0_.brand as brand2_0_, car0_.client_id as client_i5_0_, car0_.model as model3_0_, car0_.rejestracja as rejestra4_0_ from car car0_
+[2019-05-13 18:45:25 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-10] [66] [DEBUG] committing
+[2019-05-13 18:45:32 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-2] [55] [DEBUG] begin
+[2019-05-13 18:45:32 ] [org.hibernate.query.criteria.internal.CriteriaQueryImpl] [http-nio-8080-exec-2] [307] [DEBUG] Rendered criteria query -> select generatedAlias0 from Client as generatedAlias0
+[2019-05-13 18:45:32 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-2] [92] [DEBUG] select client0_.id as id1_1_, client0_.firstname as firstnam2_1_, client0_.lastname as lastname3_1_ from client client0_
+[2019-05-13 18:45:32 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-2] [66] [DEBUG] committing
+[2019-05-13 18:45:32 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-2] [55] [DEBUG] begin
+[2019-05-13 18:45:32 ] [org.hibernate.query.criteria.internal.CriteriaQueryImpl] [http-nio-8080-exec-2] [307] [DEBUG] Rendered criteria query -> select generatedAlias0 from Car as generatedAlias0
+[2019-05-13 18:45:32 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-2] [92] [DEBUG] select car0_.id as id1_0_, car0_.brand as brand2_0_, car0_.client_id as client_i5_0_, car0_.model as model3_0_, car0_.rejestracja as rejestra4_0_ from car car0_
+[2019-05-13 18:45:32 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-2] [66] [DEBUG] committing
+[2019-05-13 18:45:32 ] [org.hibernate.validator.internal.metadata.descriptor.ConstraintDescriptorImpl] [http-nio-8080-exec-2] [680] [DEBUG] Adding composing constraint: ConstraintDescriptorImpl{annotation=j.v.c.NotNull, payloads=[], hasComposingConstraints=true, isReportAsSingleInvalidConstraint=false, elementType=FIELD, definedOn=DEFINED_LOCALLY, groups=[interface javax.validation.groups.Default], attributes={groups=[Ljava.lang.Class;@77648307, message={javax.validation.constraints.NotNull.message}, payload=[Ljava.lang.Class;@3faf954c}, constraintType=GENERIC, valueUnwrapping=DEFAULT}.
+[2019-05-13 18:45:32 ] [org.hibernate.validator.internal.metadata.descriptor.ConstraintDescriptorImpl] [http-nio-8080-exec-2] [680] [DEBUG] Adding composing constraint: ConstraintDescriptorImpl{annotation=j.v.c.NotNull, payloads=[], hasComposingConstraints=true, isReportAsSingleInvalidConstraint=false, elementType=FIELD, definedOn=DEFINED_LOCALLY, groups=[interface javax.validation.groups.Default], attributes={groups=[Ljava.lang.Class;@6898b5e7, message={javax.validation.constraints.NotNull.message}, payload=[Ljava.lang.Class;@237a6318}, constraintType=GENERIC, valueUnwrapping=DEFAULT}.
+[2019-05-13 18:45:32 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-2] [55] [DEBUG] begin
+[2019-05-13 18:45:32 ] [org.hibernate.engine.spi.ActionQueue] [http-nio-8080-exec-2] [281] [DEBUG] Executing identity-insert immediately
+[2019-05-13 18:45:32 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-2] [92] [DEBUG] insert into client (id, firstname, lastname) values (null, ?, ?)
+[2019-05-13 18:45:32 ] [org.hibernate.id.IdentifierGeneratorHelper] [http-nio-8080-exec-2] [78] [DEBUG] Natively generated identity: 1
+[2019-05-13 18:45:32 ] [org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl] [http-nio-8080-exec-2] [115] [DEBUG] HHH000387: ResultSet's statement was not registered
+[2019-05-13 18:45:32 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-2] [66] [DEBUG] committing
+[2019-05-13 18:45:32 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-2] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:45:32 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-2] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:45:32 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-2] [189] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [<unreferenced>] (initialized)
+[2019-05-13 18:45:32 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-2] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+[2019-05-13 18:45:32 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-2] [113] [DEBUG] Flushed: 1 (re)creations, 0 updates, 0 removals to 1 collections
+[2019-05-13 18:45:32 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-2] [102] [DEBUG] Listing entities:
+[2019-05-13 18:45:32 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-2] [109] [DEBUG] pl.coderslab.client.Client{cars=[], firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:45:32 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-3] [55] [DEBUG] begin
+[2019-05-13 18:45:32 ] [org.hibernate.query.criteria.internal.CriteriaQueryImpl] [http-nio-8080-exec-3] [307] [DEBUG] Rendered criteria query -> select generatedAlias0 from Client as generatedAlias0
+[2019-05-13 18:45:32 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-3] [92] [DEBUG] select client0_.id as id1_1_, client0_.firstname as firstnam2_1_, client0_.lastname as lastname3_1_ from client client0_
+[2019-05-13 18:45:32 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-3] [384] [DEBUG] Result set row: 0
+[2019-05-13 18:45:32 ] [org.hibernate.loader.Loader] [http-nio-8080-exec-3] [1533] [DEBUG] Result row: EntityKey[pl.coderslab.client.Client#1]
+[2019-05-13 18:45:32 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-3] [144] [DEBUG] Resolving associations for [pl.coderslab.client.Client#1]
+[2019-05-13 18:45:32 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-3] [287] [DEBUG] Done materializing entity [pl.coderslab.client.Client#1]
+[2019-05-13 18:45:32 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-3] [66] [DEBUG] committing
+[2019-05-13 18:45:32 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-3] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:45:32 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-3] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:45:32 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-3] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:45:32 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-3] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+[2019-05-13 18:45:32 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-3] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 1 collections
+[2019-05-13 18:45:32 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-3] [102] [DEBUG] Listing entities:
+[2019-05-13 18:45:32 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-3] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:45:32 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-3] [55] [DEBUG] begin
+[2019-05-13 18:45:32 ] [org.hibernate.query.criteria.internal.CriteriaQueryImpl] [http-nio-8080-exec-3] [307] [DEBUG] Rendered criteria query -> select generatedAlias0 from Car as generatedAlias0
+[2019-05-13 18:45:32 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-3] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:45:32 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-3] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:45:32 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-3] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:45:32 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-3] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+[2019-05-13 18:45:32 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-3] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 1 collections
+[2019-05-13 18:45:32 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-3] [102] [DEBUG] Listing entities:
+[2019-05-13 18:45:32 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-3] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:45:32 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-3] [92] [DEBUG] select car0_.id as id1_0_, car0_.brand as brand2_0_, car0_.client_id as client_i5_0_, car0_.model as model3_0_, car0_.rejestracja as rejestra4_0_ from car car0_
+[2019-05-13 18:45:32 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-3] [66] [DEBUG] committing
+[2019-05-13 18:45:32 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-3] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:45:32 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-3] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:45:32 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-3] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:45:32 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-3] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+[2019-05-13 18:45:32 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-3] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 1 collections
+[2019-05-13 18:45:32 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-3] [102] [DEBUG] Listing entities:
+[2019-05-13 18:45:32 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-3] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:45:32 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-3] [55] [DEBUG] begin
+[2019-05-13 18:45:32 ] [org.hibernate.query.criteria.internal.CriteriaQueryImpl] [http-nio-8080-exec-3] [307] [DEBUG] Rendered criteria query -> select generatedAlias0 from Client as generatedAlias0
+[2019-05-13 18:45:32 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-3] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:45:32 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-3] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:45:32 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-3] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:45:32 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-3] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+[2019-05-13 18:45:32 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-3] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 1 collections
+[2019-05-13 18:45:32 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-3] [102] [DEBUG] Listing entities:
+[2019-05-13 18:45:32 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-3] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:45:32 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-3] [92] [DEBUG] select client0_.id as id1_1_, client0_.firstname as firstnam2_1_, client0_.lastname as lastname3_1_ from client client0_
+[2019-05-13 18:45:32 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-3] [384] [DEBUG] Result set row: 0
+[2019-05-13 18:45:32 ] [org.hibernate.loader.Loader] [http-nio-8080-exec-3] [1533] [DEBUG] Result row: EntityKey[pl.coderslab.client.Client#1]
+[2019-05-13 18:45:32 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-3] [66] [DEBUG] committing
+[2019-05-13 18:45:32 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-3] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:45:32 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-3] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:45:32 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-3] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:45:32 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-3] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+[2019-05-13 18:45:32 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-3] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 1 collections
+[2019-05-13 18:45:32 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-3] [102] [DEBUG] Listing entities:
+[2019-05-13 18:45:32 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-3] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:46:55 ] [pl.coderslab.mainController.MainPageController] [http-nio-8080-exec-6] [18] [INFO ] **** WYWOŁANO > showMainPage()
+[2019-05-13 18:47:01 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-8] [55] [DEBUG] begin
+[2019-05-13 18:47:01 ] [org.hibernate.query.criteria.internal.CriteriaQueryImpl] [http-nio-8080-exec-8] [307] [DEBUG] Rendered criteria query -> select generatedAlias0 from Client as generatedAlias0
+[2019-05-13 18:47:01 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-8] [92] [DEBUG] select client0_.id as id1_1_, client0_.firstname as firstnam2_1_, client0_.lastname as lastname3_1_ from client client0_
+[2019-05-13 18:47:01 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-8] [384] [DEBUG] Result set row: 0
+[2019-05-13 18:47:01 ] [org.hibernate.loader.Loader] [http-nio-8080-exec-8] [1533] [DEBUG] Result row: EntityKey[pl.coderslab.client.Client#1]
+[2019-05-13 18:47:01 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-8] [144] [DEBUG] Resolving associations for [pl.coderslab.client.Client#1]
+[2019-05-13 18:47:01 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-8] [287] [DEBUG] Done materializing entity [pl.coderslab.client.Client#1]
+[2019-05-13 18:47:02 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-8] [66] [DEBUG] committing
+[2019-05-13 18:47:02 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-8] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:47:02 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-8] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:47:02 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-8] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:47:02 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-8] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+[2019-05-13 18:47:02 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-8] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 1 collections
+[2019-05-13 18:47:02 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-8] [102] [DEBUG] Listing entities:
+[2019-05-13 18:47:02 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-8] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:47:02 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-8] [55] [DEBUG] begin
+[2019-05-13 18:47:02 ] [org.hibernate.query.criteria.internal.CriteriaQueryImpl] [http-nio-8080-exec-8] [307] [DEBUG] Rendered criteria query -> select generatedAlias0 from Car as generatedAlias0
+[2019-05-13 18:47:02 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-8] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:47:02 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-8] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:47:02 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-8] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:47:02 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-8] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+[2019-05-13 18:47:02 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-8] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 1 collections
+[2019-05-13 18:47:02 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-8] [102] [DEBUG] Listing entities:
+[2019-05-13 18:47:02 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-8] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:47:02 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-8] [92] [DEBUG] select car0_.id as id1_0_, car0_.brand as brand2_0_, car0_.client_id as client_i5_0_, car0_.model as model3_0_, car0_.rejestracja as rejestra4_0_ from car car0_
+[2019-05-13 18:47:02 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-8] [66] [DEBUG] committing
+[2019-05-13 18:47:02 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-8] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:47:02 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-8] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:47:02 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-8] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:47:02 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-8] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+[2019-05-13 18:47:02 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-8] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 1 collections
+[2019-05-13 18:47:02 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-8] [102] [DEBUG] Listing entities:
+[2019-05-13 18:47:02 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-8] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:47:02 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-8] [55] [DEBUG] begin
+[2019-05-13 18:47:02 ] [org.hibernate.query.criteria.internal.CriteriaQueryImpl] [http-nio-8080-exec-8] [307] [DEBUG] Rendered criteria query -> select generatedAlias0 from Client as generatedAlias0
+[2019-05-13 18:47:02 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-8] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:47:02 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-8] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:47:02 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-8] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:47:02 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-8] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+[2019-05-13 18:47:02 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-8] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 1 collections
+[2019-05-13 18:47:02 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-8] [102] [DEBUG] Listing entities:
+[2019-05-13 18:47:02 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-8] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:47:02 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-8] [92] [DEBUG] select client0_.id as id1_1_, client0_.firstname as firstnam2_1_, client0_.lastname as lastname3_1_ from client client0_
+[2019-05-13 18:47:02 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-8] [384] [DEBUG] Result set row: 0
+[2019-05-13 18:47:02 ] [org.hibernate.loader.Loader] [http-nio-8080-exec-8] [1533] [DEBUG] Result row: EntityKey[pl.coderslab.client.Client#1]
+[2019-05-13 18:47:02 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-8] [66] [DEBUG] committing
+[2019-05-13 18:47:02 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-8] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:47:02 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-8] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:47:02 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-8] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:47:02 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-8] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+[2019-05-13 18:47:02 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-8] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 1 collections
+[2019-05-13 18:47:02 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-8] [102] [DEBUG] Listing entities:
+[2019-05-13 18:47:02 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-8] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:47:07 ] [pl.coderslab.mainController.MainPageController] [http-nio-8080-exec-10] [18] [INFO ] **** WYWOŁANO > showMainPage()
+[2019-05-13 18:47:11 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-2] [55] [DEBUG] begin
+[2019-05-13 18:47:11 ] [org.hibernate.query.criteria.internal.CriteriaQueryImpl] [http-nio-8080-exec-2] [307] [DEBUG] Rendered criteria query -> select generatedAlias0 from Client as generatedAlias0
+[2019-05-13 18:47:11 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-2] [92] [DEBUG] select client0_.id as id1_1_, client0_.firstname as firstnam2_1_, client0_.lastname as lastname3_1_ from client client0_
+[2019-05-13 18:47:11 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-2] [384] [DEBUG] Result set row: 0
+[2019-05-13 18:47:11 ] [org.hibernate.loader.Loader] [http-nio-8080-exec-2] [1533] [DEBUG] Result row: EntityKey[pl.coderslab.client.Client#1]
+[2019-05-13 18:47:11 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-2] [144] [DEBUG] Resolving associations for [pl.coderslab.client.Client#1]
+[2019-05-13 18:47:11 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-2] [287] [DEBUG] Done materializing entity [pl.coderslab.client.Client#1]
+[2019-05-13 18:47:11 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-2] [66] [DEBUG] committing
+[2019-05-13 18:47:11 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-2] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:47:11 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-2] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:47:11 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-2] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:47:11 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-2] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+[2019-05-13 18:47:11 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-2] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 1 collections
+[2019-05-13 18:47:11 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-2] [102] [DEBUG] Listing entities:
+[2019-05-13 18:47:11 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-2] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:47:11 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-2] [55] [DEBUG] begin
+[2019-05-13 18:47:11 ] [org.hibernate.query.criteria.internal.CriteriaQueryImpl] [http-nio-8080-exec-2] [307] [DEBUG] Rendered criteria query -> select generatedAlias0 from Car as generatedAlias0
+[2019-05-13 18:47:11 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-2] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:47:11 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-2] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:47:11 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-2] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:47:11 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-2] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+[2019-05-13 18:47:11 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-2] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 1 collections
+[2019-05-13 18:47:11 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-2] [102] [DEBUG] Listing entities:
+[2019-05-13 18:47:11 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-2] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:47:11 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-2] [92] [DEBUG] select car0_.id as id1_0_, car0_.brand as brand2_0_, car0_.client_id as client_i5_0_, car0_.model as model3_0_, car0_.rejestracja as rejestra4_0_ from car car0_
+[2019-05-13 18:47:11 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-2] [66] [DEBUG] committing
+[2019-05-13 18:47:11 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-2] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:47:11 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-2] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:47:11 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-2] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:47:11 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-2] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+[2019-05-13 18:47:11 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-2] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 1 collections
+[2019-05-13 18:47:11 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-2] [102] [DEBUG] Listing entities:
+[2019-05-13 18:47:11 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-2] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:47:20 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-4] [55] [DEBUG] begin
+[2019-05-13 18:47:20 ] [org.hibernate.query.criteria.internal.CriteriaQueryImpl] [http-nio-8080-exec-4] [307] [DEBUG] Rendered criteria query -> select generatedAlias0 from Client as generatedAlias0
+[2019-05-13 18:47:20 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-4] [92] [DEBUG] select client0_.id as id1_1_, client0_.firstname as firstnam2_1_, client0_.lastname as lastname3_1_ from client client0_
+[2019-05-13 18:47:20 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-4] [384] [DEBUG] Result set row: 0
+[2019-05-13 18:47:20 ] [org.hibernate.loader.Loader] [http-nio-8080-exec-4] [1533] [DEBUG] Result row: EntityKey[pl.coderslab.client.Client#1]
+[2019-05-13 18:47:20 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-4] [144] [DEBUG] Resolving associations for [pl.coderslab.client.Client#1]
+[2019-05-13 18:47:20 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-4] [287] [DEBUG] Done materializing entity [pl.coderslab.client.Client#1]
+[2019-05-13 18:47:20 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-4] [66] [DEBUG] committing
+[2019-05-13 18:47:20 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-4] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:47:20 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-4] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:47:20 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-4] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:47:20 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-4] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+[2019-05-13 18:47:20 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-4] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 1 collections
+[2019-05-13 18:47:20 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-4] [102] [DEBUG] Listing entities:
+[2019-05-13 18:47:20 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-4] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:47:20 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-4] [55] [DEBUG] begin
+[2019-05-13 18:47:20 ] [org.hibernate.query.criteria.internal.CriteriaQueryImpl] [http-nio-8080-exec-4] [307] [DEBUG] Rendered criteria query -> select generatedAlias0 from Car as generatedAlias0
+[2019-05-13 18:47:20 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-4] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:47:20 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-4] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:47:20 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-4] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:47:20 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-4] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+[2019-05-13 18:47:20 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-4] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 1 collections
+[2019-05-13 18:47:20 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-4] [102] [DEBUG] Listing entities:
+[2019-05-13 18:47:20 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-4] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:47:20 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-4] [92] [DEBUG] select car0_.id as id1_0_, car0_.brand as brand2_0_, car0_.client_id as client_i5_0_, car0_.model as model3_0_, car0_.rejestracja as rejestra4_0_ from car car0_
+[2019-05-13 18:47:20 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-4] [66] [DEBUG] committing
+[2019-05-13 18:47:20 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-4] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:47:20 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-4] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:47:20 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-4] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:47:20 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-4] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+[2019-05-13 18:47:20 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-4] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 1 collections
+[2019-05-13 18:47:20 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-4] [102] [DEBUG] Listing entities:
+[2019-05-13 18:47:20 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-4] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:47:20 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-4] [55] [DEBUG] begin
+[2019-05-13 18:47:20 ] [org.hibernate.engine.spi.ActionQueue] [http-nio-8080-exec-4] [281] [DEBUG] Executing identity-insert immediately
+[2019-05-13 18:47:20 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-4] [92] [DEBUG] insert into client (id, firstname, lastname) values (null, ?, ?)
+[2019-05-13 18:47:20 ] [org.hibernate.id.IdentifierGeneratorHelper] [http-nio-8080-exec-4] [78] [DEBUG] Natively generated identity: 2
+[2019-05-13 18:47:20 ] [org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl] [http-nio-8080-exec-4] [115] [DEBUG] HHH000387: ResultSet's statement was not registered
+[2019-05-13 18:47:20 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-4] [66] [DEBUG] committing
+[2019-05-13 18:47:20 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-4] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:47:20 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-4] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:47:20 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-4] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:47:20 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-4] [189] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#2], was: [<unreferenced>] (initialized)
+[2019-05-13 18:47:20 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-4] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+[2019-05-13 18:47:20 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-4] [113] [DEBUG] Flushed: 1 (re)creations, 0 updates, 0 removals to 2 collections
+[2019-05-13 18:47:20 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-4] [102] [DEBUG] Listing entities:
+[2019-05-13 18:47:20 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-4] [109] [DEBUG] pl.coderslab.client.Client{cars=[], firstName=Marcin, lastName=Opałka, id=2}
+[2019-05-13 18:47:20 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-4] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:47:20 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-5] [55] [DEBUG] begin
+[2019-05-13 18:47:20 ] [org.hibernate.query.criteria.internal.CriteriaQueryImpl] [http-nio-8080-exec-5] [307] [DEBUG] Rendered criteria query -> select generatedAlias0 from Client as generatedAlias0
+[2019-05-13 18:47:20 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-5] [92] [DEBUG] select client0_.id as id1_1_, client0_.firstname as firstnam2_1_, client0_.lastname as lastname3_1_ from client client0_
+[2019-05-13 18:47:20 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-5] [384] [DEBUG] Result set row: 0
+[2019-05-13 18:47:20 ] [org.hibernate.loader.Loader] [http-nio-8080-exec-5] [1533] [DEBUG] Result row: EntityKey[pl.coderslab.client.Client#1]
+[2019-05-13 18:47:20 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-5] [384] [DEBUG] Result set row: 1
+[2019-05-13 18:47:20 ] [org.hibernate.loader.Loader] [http-nio-8080-exec-5] [1533] [DEBUG] Result row: EntityKey[pl.coderslab.client.Client#2]
+[2019-05-13 18:47:20 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-5] [144] [DEBUG] Resolving associations for [pl.coderslab.client.Client#1]
+[2019-05-13 18:47:20 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-5] [287] [DEBUG] Done materializing entity [pl.coderslab.client.Client#1]
+[2019-05-13 18:47:20 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-5] [144] [DEBUG] Resolving associations for [pl.coderslab.client.Client#2]
+[2019-05-13 18:47:20 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-5] [287] [DEBUG] Done materializing entity [pl.coderslab.client.Client#2]
+[2019-05-13 18:47:20 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-5] [66] [DEBUG] committing
+[2019-05-13 18:47:20 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-5] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:47:20 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-5] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:47:20 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-5] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:47:20 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-5] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#2], was: [pl.coderslab.client.Client.cars#2] (uninitialized)
+[2019-05-13 18:47:20 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-5] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+[2019-05-13 18:47:20 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-5] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+[2019-05-13 18:47:20 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-5] [102] [DEBUG] Listing entities:
+[2019-05-13 18:47:20 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-5] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Marcin, lastName=Opałka, id=2}
+[2019-05-13 18:47:20 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-5] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:47:20 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-5] [55] [DEBUG] begin
+[2019-05-13 18:47:20 ] [org.hibernate.query.criteria.internal.CriteriaQueryImpl] [http-nio-8080-exec-5] [307] [DEBUG] Rendered criteria query -> select generatedAlias0 from Car as generatedAlias0
+[2019-05-13 18:47:20 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-5] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:47:20 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-5] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:47:20 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-5] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:47:20 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-5] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#2], was: [pl.coderslab.client.Client.cars#2] (uninitialized)
+[2019-05-13 18:47:20 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-5] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+[2019-05-13 18:47:20 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-5] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+[2019-05-13 18:47:20 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-5] [102] [DEBUG] Listing entities:
+[2019-05-13 18:47:20 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-5] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Marcin, lastName=Opałka, id=2}
+[2019-05-13 18:47:20 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-5] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:47:20 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-5] [92] [DEBUG] select car0_.id as id1_0_, car0_.brand as brand2_0_, car0_.client_id as client_i5_0_, car0_.model as model3_0_, car0_.rejestracja as rejestra4_0_ from car car0_
+[2019-05-13 18:47:20 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-5] [66] [DEBUG] committing
+[2019-05-13 18:47:20 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-5] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:47:20 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-5] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:47:20 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-5] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:47:20 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-5] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#2], was: [pl.coderslab.client.Client.cars#2] (uninitialized)
+[2019-05-13 18:47:20 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-5] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+[2019-05-13 18:47:20 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-5] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+[2019-05-13 18:47:20 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-5] [102] [DEBUG] Listing entities:
+[2019-05-13 18:47:20 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-5] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Marcin, lastName=Opałka, id=2}
+[2019-05-13 18:47:20 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-5] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:47:20 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-5] [55] [DEBUG] begin
+[2019-05-13 18:47:20 ] [org.hibernate.query.criteria.internal.CriteriaQueryImpl] [http-nio-8080-exec-5] [307] [DEBUG] Rendered criteria query -> select generatedAlias0 from Client as generatedAlias0
+[2019-05-13 18:47:20 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-5] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:47:20 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-5] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:47:20 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-5] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:47:20 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-5] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#2], was: [pl.coderslab.client.Client.cars#2] (uninitialized)
+[2019-05-13 18:47:20 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-5] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+[2019-05-13 18:47:20 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-5] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+[2019-05-13 18:47:20 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-5] [102] [DEBUG] Listing entities:
+[2019-05-13 18:47:20 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-5] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Marcin, lastName=Opałka, id=2}
+[2019-05-13 18:47:20 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-5] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:47:20 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-5] [92] [DEBUG] select client0_.id as id1_1_, client0_.firstname as firstnam2_1_, client0_.lastname as lastname3_1_ from client client0_
+[2019-05-13 18:47:20 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-5] [384] [DEBUG] Result set row: 0
+[2019-05-13 18:47:20 ] [org.hibernate.loader.Loader] [http-nio-8080-exec-5] [1533] [DEBUG] Result row: EntityKey[pl.coderslab.client.Client#1]
+[2019-05-13 18:47:20 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-5] [384] [DEBUG] Result set row: 1
+[2019-05-13 18:47:20 ] [org.hibernate.loader.Loader] [http-nio-8080-exec-5] [1533] [DEBUG] Result row: EntityKey[pl.coderslab.client.Client#2]
+[2019-05-13 18:47:20 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-5] [66] [DEBUG] committing
+[2019-05-13 18:47:20 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-5] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:47:20 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-5] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:47:20 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-5] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:47:20 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-5] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#2], was: [pl.coderslab.client.Client.cars#2] (uninitialized)
+[2019-05-13 18:47:20 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-5] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+[2019-05-13 18:47:20 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-5] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+[2019-05-13 18:47:20 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-5] [102] [DEBUG] Listing entities:
+[2019-05-13 18:47:20 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-5] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Marcin, lastName=Opałka, id=2}
+[2019-05-13 18:47:20 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-5] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:47:25 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-7] [55] [DEBUG] begin
+[2019-05-13 18:47:25 ] [org.hibernate.query.criteria.internal.CriteriaQueryImpl] [http-nio-8080-exec-7] [307] [DEBUG] Rendered criteria query -> select generatedAlias0 from Client as generatedAlias0
+[2019-05-13 18:47:25 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-7] [92] [DEBUG] select client0_.id as id1_1_, client0_.firstname as firstnam2_1_, client0_.lastname as lastname3_1_ from client client0_
+[2019-05-13 18:47:25 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-7] [384] [DEBUG] Result set row: 0
+[2019-05-13 18:47:25 ] [org.hibernate.loader.Loader] [http-nio-8080-exec-7] [1533] [DEBUG] Result row: EntityKey[pl.coderslab.client.Client#1]
+[2019-05-13 18:47:25 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-7] [384] [DEBUG] Result set row: 1
+[2019-05-13 18:47:25 ] [org.hibernate.loader.Loader] [http-nio-8080-exec-7] [1533] [DEBUG] Result row: EntityKey[pl.coderslab.client.Client#2]
+[2019-05-13 18:47:25 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-7] [144] [DEBUG] Resolving associations for [pl.coderslab.client.Client#1]
+[2019-05-13 18:47:25 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-7] [287] [DEBUG] Done materializing entity [pl.coderslab.client.Client#1]
+[2019-05-13 18:47:25 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-7] [144] [DEBUG] Resolving associations for [pl.coderslab.client.Client#2]
+[2019-05-13 18:47:25 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-7] [287] [DEBUG] Done materializing entity [pl.coderslab.client.Client#2]
+[2019-05-13 18:47:25 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-7] [66] [DEBUG] committing
+[2019-05-13 18:47:25 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-7] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:47:25 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-7] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:47:25 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-7] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:47:25 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-7] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#2], was: [pl.coderslab.client.Client.cars#2] (uninitialized)
+[2019-05-13 18:47:25 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-7] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+[2019-05-13 18:47:25 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-7] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+[2019-05-13 18:47:25 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-7] [102] [DEBUG] Listing entities:
+[2019-05-13 18:47:25 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-7] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Marcin, lastName=Opałka, id=2}
+[2019-05-13 18:47:25 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-7] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:47:25 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-7] [55] [DEBUG] begin
+[2019-05-13 18:47:25 ] [org.hibernate.query.criteria.internal.CriteriaQueryImpl] [http-nio-8080-exec-7] [307] [DEBUG] Rendered criteria query -> select generatedAlias0 from Car as generatedAlias0 left join generatedAlias0.client as generatedAlias1 where generatedAlias1.id=:param0
+[2019-05-13 18:47:25 ] [org.hibernate.hql.internal.ast.QueryTranslatorImpl] [http-nio-8080-exec-7] [282] [DEBUG] parse() - HQL: select generatedAlias0 from pl.coderslab.car.Car as generatedAlias0 left join generatedAlias0.client as generatedAlias1 where generatedAlias1.id=:param0
+[2019-05-13 18:47:25 ] [org.hibernate.hql.internal.ast.ErrorCounter] [http-nio-8080-exec-7] [95] [DEBUG] throwQueryException() : no errors
+[2019-05-13 18:47:25 ] [org.hibernate.hql.internal.ast.QueryTranslatorImpl] [http-nio-8080-exec-7] [305] [DEBUG] --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    +-[SELECT_FROM] Node: 'SELECT_FROM'
+    |  +-[FROM] Node: 'from'
+    |  |  +-[RANGE] Node: 'RANGE'
+    |  |  |  +-[DOT] Node: '.'
+    |  |  |  |  +-[DOT] Node: '.'
+    |  |  |  |  |  +-[DOT] Node: '.'
+    |  |  |  |  |  |  +-[IDENT] Node: 'pl'
+    |  |  |  |  |  |  \-[IDENT] Node: 'coderslab'
+    |  |  |  |  |  \-[IDENT] Node: 'car'
+    |  |  |  |  \-[IDENT] Node: 'Car'
+    |  |  |  \-[ALIAS] Node: 'generatedAlias0'
+    |  |  \-[JOIN] Node: 'join'
+    |  |     +-[LEFT] Node: 'left'
+    |  |     +-[DOT] Node: '.'
+    |  |     |  +-[IDENT] Node: 'generatedAlias0'
+    |  |     |  \-[IDENT] Node: 'client'
+    |  |     \-[ALIAS] Node: 'generatedAlias1'
+    |  \-[SELECT] Node: 'select'
+    |     \-[IDENT] Node: 'generatedAlias0'
+    \-[WHERE] Node: 'where'
+       \-[EQ] Node: '='
+          +-[DOT] Node: '.'
+          |  +-[IDENT] Node: 'generatedAlias1'
+          |  \-[IDENT] Node: 'id'
+          \-[COLON] Node: ':'
+             \-[IDENT] Node: 'param0'
+
+[2019-05-13 18:47:25 ] [org.hibernate.hql.internal.antlr.HqlSqlBaseWalker] [http-nio-8080-exec-7] [124] [DEBUG] select << begin [level=1, statement=select]
+[2019-05-13 18:47:25 ] [org.hibernate.hql.internal.ast.tree.FromElement] [http-nio-8080-exec-7] [147] [DEBUG] FromClause{level=1} : pl.coderslab.car.Car (generatedAlias0) -> car0_
+[2019-05-13 18:47:25 ] [org.hibernate.hql.internal.ast.tree.FromReferenceNode] [http-nio-8080-exec-7] [60] [DEBUG] Resolved : generatedAlias0 -> car0_.id
+[2019-05-13 18:47:25 ] [org.hibernate.hql.internal.ast.tree.DotNode] [http-nio-8080-exec-7] [688] [DEBUG] getDataType() : client -> org.hibernate.type.ManyToOneType(pl.coderslab.client.Client)
+[2019-05-13 18:47:25 ] [org.hibernate.hql.internal.ast.tree.DotNode] [http-nio-8080-exec-7] [438] [DEBUG] dereferenceEntityJoin() : generating join for client in pl.coderslab.car.Car (generatedAlias1) parent = [ {null} ]
+[2019-05-13 18:47:25 ] [org.hibernate.hql.internal.ast.tree.FromElement] [http-nio-8080-exec-7] [147] [DEBUG] FromClause{level=1} : pl.coderslab.client.Client (generatedAlias1) -> client1_
+[2019-05-13 18:47:25 ] [org.hibernate.hql.internal.ast.tree.FromClause] [http-nio-8080-exec-7] [287] [DEBUG] addJoinByPathMap() : generatedAlias0.client -> FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=generatedAlias1,role=null,tableName=client,tableAlias=client1_,origin=car car0_,columns={car0_.client_id ,className=pl.coderslab.client.Client}}
+[2019-05-13 18:47:25 ] [org.hibernate.hql.internal.ast.tree.FromReferenceNode] [http-nio-8080-exec-7] [60] [DEBUG] Resolved : generatedAlias0.client -> car0_.client_id
+[2019-05-13 18:47:25 ] [org.hibernate.hql.internal.ast.HqlSqlWalker] [http-nio-8080-exec-7] [435] [DEBUG] createFromJoinElement() : -- join tree --
+ \-[JOIN_FRAGMENT] FromElement: 'client client1_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=generatedAlias1,role=pl.coderslab.car.Car.client,tableName=client,tableAlias=client1_,origin=car car0_,columns={car0_.client_id ,className=pl.coderslab.client.Client}}
+
+[2019-05-13 18:47:25 ] [org.hibernate.hql.internal.ast.tree.FromReferenceNode] [http-nio-8080-exec-7] [60] [DEBUG] Resolved : generatedAlias0 -> car0_.id
+[2019-05-13 18:47:25 ] [org.hibernate.hql.internal.ast.tree.FromReferenceNode] [http-nio-8080-exec-7] [60] [DEBUG] Resolved : generatedAlias1 -> client1_.id
+[2019-05-13 18:47:25 ] [org.hibernate.hql.internal.ast.tree.DotNode] [http-nio-8080-exec-7] [688] [DEBUG] getDataType() : id -> org.hibernate.type.LongType@57fb31f9
+[2019-05-13 18:47:25 ] [org.hibernate.hql.internal.ast.tree.FromReferenceNode] [http-nio-8080-exec-7] [60] [DEBUG] Resolved : generatedAlias1.id -> client1_.id
+[2019-05-13 18:47:25 ] [org.hibernate.hql.internal.antlr.HqlSqlBaseWalker] [http-nio-8080-exec-7] [128] [DEBUG] select : finishing up [level=1, statement=select]
+[2019-05-13 18:47:25 ] [org.hibernate.hql.internal.ast.HqlSqlWalker] [http-nio-8080-exec-7] [747] [DEBUG] processQuery() :  ( SELECT ( {select clause} car0_.id ) ( FromClause{level=1} ( car car0_ client client1_ ) ) ( where ( = ( client1_.id client1_.id id ) ? ) ) )
+[2019-05-13 18:47:25 ] [org.hibernate.hql.internal.ast.util.JoinProcessor] [http-nio-8080-exec-7] [192] [DEBUG] Using FROM fragment [car car0_]
+[2019-05-13 18:47:25 ] [org.hibernate.hql.internal.ast.util.JoinProcessor] [http-nio-8080-exec-7] [192] [DEBUG] Using FROM fragment [left outer join client client1_ on car0_.client_id=client1_.id]
+[2019-05-13 18:47:25 ] [org.hibernate.hql.internal.antlr.HqlSqlBaseWalker] [http-nio-8080-exec-7] [132] [DEBUG] select >> end [level=1, statement=select]
+[2019-05-13 18:47:25 ] [org.hibernate.hql.internal.ast.QueryTranslatorImpl] [http-nio-8080-exec-7] [269] [DEBUG] --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (car,client)
+    +-[SELECT_CLAUSE] SelectClause: '{select clause}'
+    |  +-[ALIAS_REF] IdentNode: 'car0_.id as id1_0_' {alias=generatedAlias0, className=pl.coderslab.car.Car, tableAlias=car0_}
+    |  \-[SQL_TOKEN] SqlFragment: 'car0_.brand as brand2_0_, car0_.client_id as client_i5_0_, car0_.model as model3_0_, car0_.rejestracja as rejestra4_0_'
+    +-[FROM] FromClause: 'from' FromClause{level=1, fromElementCounter=2, fromElements=2, fromElementByClassAlias=[generatedAlias0, generatedAlias1], fromElementByTableAlias=[car0_, client1_], fromElementsByPath=[generatedAlias0.client], collectionJoinFromElementsByPath=[], impliedElements=[]}
+    |  \-[FROM_FRAGMENT] FromElement: 'car car0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=generatedAlias0,role=null,tableName=car,tableAlias=car0_,origin=null,columns={,className=pl.coderslab.car.Car}}
+    |     \-[JOIN_FRAGMENT] FromElement: 'left outer join client client1_ on car0_.client_id=client1_.id' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=generatedAlias1,role=pl.coderslab.car.Car.client,tableName=client,tableAlias=client1_,origin=car car0_,columns={car0_.client_id ,className=pl.coderslab.client.Client}}
+    \-[WHERE] SqlNode: 'where'
+       \-[EQ] BinaryLogicOperatorNode: '='
+          +-[DOT] DotNode: 'client1_.id' {propertyName=id,dereferenceType=PRIMITIVE,getPropertyPath=id,path=generatedAlias1.id,tableAlias=client1_,className=pl.coderslab.client.Client,classAlias=generatedAlias1}
+          |  +-[ALIAS_REF] IdentNode: 'client1_.id' {alias=generatedAlias1, className=pl.coderslab.client.Client, tableAlias=client1_}
+          |  \-[IDENT] IdentNode: 'id' {originalText=id}
+          \-[NAMED_PARAM] ParameterNode: '?' {name=param0, expectedType=org.hibernate.type.LongType@57fb31f9}
+
+[2019-05-13 18:47:25 ] [org.hibernate.hql.internal.ast.ErrorCounter] [http-nio-8080-exec-7] [95] [DEBUG] throwQueryException() : no errors
+[2019-05-13 18:47:25 ] [org.hibernate.hql.internal.ast.QueryTranslatorImpl] [http-nio-8080-exec-7] [251] [DEBUG] HQL: select generatedAlias0 from pl.coderslab.car.Car as generatedAlias0 left join generatedAlias0.client as generatedAlias1 where generatedAlias1.id=:param0
+[2019-05-13 18:47:25 ] [org.hibernate.hql.internal.ast.QueryTranslatorImpl] [http-nio-8080-exec-7] [252] [DEBUG] SQL: select car0_.id as id1_0_, car0_.brand as brand2_0_, car0_.client_id as client_i5_0_, car0_.model as model3_0_, car0_.rejestracja as rejestra4_0_ from car car0_ left outer join client client1_ on car0_.client_id=client1_.id where client1_.id=?
+[2019-05-13 18:47:25 ] [org.hibernate.hql.internal.ast.ErrorCounter] [http-nio-8080-exec-7] [95] [DEBUG] throwQueryException() : no errors
+[2019-05-13 18:47:25 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-7] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:47:25 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-7] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:47:25 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-7] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:47:25 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-7] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#2], was: [pl.coderslab.client.Client.cars#2] (uninitialized)
+[2019-05-13 18:47:25 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-7] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+[2019-05-13 18:47:25 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-7] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+[2019-05-13 18:47:25 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-7] [102] [DEBUG] Listing entities:
+[2019-05-13 18:47:25 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-7] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Marcin, lastName=Opałka, id=2}
+[2019-05-13 18:47:25 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-7] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:47:25 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-7] [92] [DEBUG] select car0_.id as id1_0_, car0_.brand as brand2_0_, car0_.client_id as client_i5_0_, car0_.model as model3_0_, car0_.rejestracja as rejestra4_0_ from car car0_ left outer join client client1_ on car0_.client_id=client1_.id where client1_.id=?
+[2019-05-13 18:47:25 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-7] [66] [DEBUG] committing
+[2019-05-13 18:47:25 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-7] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:47:25 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-7] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:47:25 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-7] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:47:25 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-7] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#2], was: [pl.coderslab.client.Client.cars#2] (uninitialized)
+[2019-05-13 18:47:25 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-7] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+[2019-05-13 18:47:25 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-7] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+[2019-05-13 18:47:25 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-7] [102] [DEBUG] Listing entities:
+[2019-05-13 18:47:25 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-7] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Marcin, lastName=Opałka, id=2}
+[2019-05-13 18:47:25 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-7] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:47:30 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-9] [55] [DEBUG] begin
+[2019-05-13 18:47:30 ] [org.hibernate.query.criteria.internal.CriteriaQueryImpl] [http-nio-8080-exec-9] [307] [DEBUG] Rendered criteria query -> select generatedAlias0 from Client as generatedAlias0
+[2019-05-13 18:47:30 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-9] [92] [DEBUG] select client0_.id as id1_1_, client0_.firstname as firstnam2_1_, client0_.lastname as lastname3_1_ from client client0_
+[2019-05-13 18:47:30 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-9] [384] [DEBUG] Result set row: 0
+[2019-05-13 18:47:30 ] [org.hibernate.loader.Loader] [http-nio-8080-exec-9] [1533] [DEBUG] Result row: EntityKey[pl.coderslab.client.Client#1]
+[2019-05-13 18:47:30 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-9] [384] [DEBUG] Result set row: 1
+[2019-05-13 18:47:30 ] [org.hibernate.loader.Loader] [http-nio-8080-exec-9] [1533] [DEBUG] Result row: EntityKey[pl.coderslab.client.Client#2]
+[2019-05-13 18:47:30 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-9] [144] [DEBUG] Resolving associations for [pl.coderslab.client.Client#1]
+[2019-05-13 18:47:30 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-9] [287] [DEBUG] Done materializing entity [pl.coderslab.client.Client#1]
+[2019-05-13 18:47:30 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-9] [144] [DEBUG] Resolving associations for [pl.coderslab.client.Client#2]
+[2019-05-13 18:47:30 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-9] [287] [DEBUG] Done materializing entity [pl.coderslab.client.Client#2]
+[2019-05-13 18:47:30 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-9] [66] [DEBUG] committing
+[2019-05-13 18:47:30 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-9] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:47:30 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-9] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:47:30 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-9] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:47:30 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-9] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#2], was: [pl.coderslab.client.Client.cars#2] (uninitialized)
+[2019-05-13 18:47:30 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-9] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+[2019-05-13 18:47:30 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-9] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+[2019-05-13 18:47:30 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-9] [102] [DEBUG] Listing entities:
+[2019-05-13 18:47:30 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-9] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Marcin, lastName=Opałka, id=2}
+[2019-05-13 18:47:30 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-9] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:47:30 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-9] [55] [DEBUG] begin
+[2019-05-13 18:47:30 ] [org.hibernate.query.criteria.internal.CriteriaQueryImpl] [http-nio-8080-exec-9] [307] [DEBUG] Rendered criteria query -> select generatedAlias0 from Car as generatedAlias0
+[2019-05-13 18:47:30 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-9] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:47:30 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-9] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:47:30 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-9] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:47:30 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-9] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#2], was: [pl.coderslab.client.Client.cars#2] (uninitialized)
+[2019-05-13 18:47:30 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-9] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+[2019-05-13 18:47:30 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-9] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+[2019-05-13 18:47:30 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-9] [102] [DEBUG] Listing entities:
+[2019-05-13 18:47:30 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-9] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Marcin, lastName=Opałka, id=2}
+[2019-05-13 18:47:30 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-9] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:47:30 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-9] [92] [DEBUG] select car0_.id as id1_0_, car0_.brand as brand2_0_, car0_.client_id as client_i5_0_, car0_.model as model3_0_, car0_.rejestracja as rejestra4_0_ from car car0_
+[2019-05-13 18:47:30 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-9] [66] [DEBUG] committing
+[2019-05-13 18:47:30 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-9] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:47:30 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-9] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:47:30 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-9] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:47:30 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-9] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#2], was: [pl.coderslab.client.Client.cars#2] (uninitialized)
+[2019-05-13 18:47:30 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-9] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+[2019-05-13 18:47:30 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-9] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+[2019-05-13 18:47:30 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-9] [102] [DEBUG] Listing entities:
+[2019-05-13 18:47:30 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-9] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Marcin, lastName=Opałka, id=2}
+[2019-05-13 18:47:30 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-9] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:47:30 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-9] [55] [DEBUG] begin
+[2019-05-13 18:47:30 ] [org.hibernate.query.criteria.internal.CriteriaQueryImpl] [http-nio-8080-exec-9] [307] [DEBUG] Rendered criteria query -> select generatedAlias0 from Client as generatedAlias0
+[2019-05-13 18:47:30 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-9] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:47:30 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-9] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:47:30 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-9] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:47:30 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-9] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#2], was: [pl.coderslab.client.Client.cars#2] (uninitialized)
+[2019-05-13 18:47:30 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-9] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+[2019-05-13 18:47:30 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-9] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+[2019-05-13 18:47:30 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-9] [102] [DEBUG] Listing entities:
+[2019-05-13 18:47:30 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-9] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Marcin, lastName=Opałka, id=2}
+[2019-05-13 18:47:30 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-9] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:47:30 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-9] [92] [DEBUG] select client0_.id as id1_1_, client0_.firstname as firstnam2_1_, client0_.lastname as lastname3_1_ from client client0_
+[2019-05-13 18:47:30 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-9] [384] [DEBUG] Result set row: 0
+[2019-05-13 18:47:30 ] [org.hibernate.loader.Loader] [http-nio-8080-exec-9] [1533] [DEBUG] Result row: EntityKey[pl.coderslab.client.Client#1]
+[2019-05-13 18:47:30 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-9] [384] [DEBUG] Result set row: 1
+[2019-05-13 18:47:30 ] [org.hibernate.loader.Loader] [http-nio-8080-exec-9] [1533] [DEBUG] Result row: EntityKey[pl.coderslab.client.Client#2]
+[2019-05-13 18:47:30 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-9] [66] [DEBUG] committing
+[2019-05-13 18:47:30 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-9] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:47:30 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-9] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:47:30 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-9] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:47:30 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-9] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#2], was: [pl.coderslab.client.Client.cars#2] (uninitialized)
+[2019-05-13 18:47:30 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-9] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+[2019-05-13 18:47:30 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-9] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+[2019-05-13 18:47:30 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-9] [102] [DEBUG] Listing entities:
+[2019-05-13 18:47:30 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-9] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Marcin, lastName=Opałka, id=2}
+[2019-05-13 18:47:30 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-9] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:47:32 ] [pl.coderslab.mainController.MainPageController] [http-nio-8080-exec-1] [18] [INFO ] **** WYWOŁANO > showMainPage()
+[2019-05-13 18:47:47 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-3] [55] [DEBUG] begin
+[2019-05-13 18:47:47 ] [org.hibernate.query.criteria.internal.CriteriaQueryImpl] [http-nio-8080-exec-3] [307] [DEBUG] Rendered criteria query -> select generatedAlias0 from Client as generatedAlias0
+[2019-05-13 18:47:47 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-3] [92] [DEBUG] select client0_.id as id1_1_, client0_.firstname as firstnam2_1_, client0_.lastname as lastname3_1_ from client client0_
+[2019-05-13 18:47:47 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-3] [384] [DEBUG] Result set row: 0
+[2019-05-13 18:47:47 ] [org.hibernate.loader.Loader] [http-nio-8080-exec-3] [1533] [DEBUG] Result row: EntityKey[pl.coderslab.client.Client#1]
+[2019-05-13 18:47:47 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-3] [384] [DEBUG] Result set row: 1
+[2019-05-13 18:47:47 ] [org.hibernate.loader.Loader] [http-nio-8080-exec-3] [1533] [DEBUG] Result row: EntityKey[pl.coderslab.client.Client#2]
+[2019-05-13 18:47:47 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-3] [144] [DEBUG] Resolving associations for [pl.coderslab.client.Client#1]
+[2019-05-13 18:47:47 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-3] [287] [DEBUG] Done materializing entity [pl.coderslab.client.Client#1]
+[2019-05-13 18:47:47 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-3] [144] [DEBUG] Resolving associations for [pl.coderslab.client.Client#2]
+[2019-05-13 18:47:47 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-3] [287] [DEBUG] Done materializing entity [pl.coderslab.client.Client#2]
+[2019-05-13 18:47:47 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-3] [66] [DEBUG] committing
+[2019-05-13 18:47:47 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-3] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:47:47 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-3] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:47:47 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-3] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:47:47 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-3] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#2], was: [pl.coderslab.client.Client.cars#2] (uninitialized)
+[2019-05-13 18:47:47 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-3] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+[2019-05-13 18:47:47 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-3] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+[2019-05-13 18:47:47 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-3] [102] [DEBUG] Listing entities:
+[2019-05-13 18:47:47 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-3] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Marcin, lastName=Opałka, id=2}
+[2019-05-13 18:47:47 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-3] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:47:47 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-3] [55] [DEBUG] begin
+[2019-05-13 18:47:47 ] [org.hibernate.query.criteria.internal.CriteriaQueryImpl] [http-nio-8080-exec-3] [307] [DEBUG] Rendered criteria query -> select generatedAlias0 from Car as generatedAlias0
+[2019-05-13 18:47:47 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-3] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:47:47 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-3] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:47:47 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-3] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:47:47 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-3] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#2], was: [pl.coderslab.client.Client.cars#2] (uninitialized)
+[2019-05-13 18:47:47 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-3] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+[2019-05-13 18:47:47 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-3] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+[2019-05-13 18:47:47 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-3] [102] [DEBUG] Listing entities:
+[2019-05-13 18:47:47 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-3] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Marcin, lastName=Opałka, id=2}
+[2019-05-13 18:47:47 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-3] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:47:47 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-3] [92] [DEBUG] select car0_.id as id1_0_, car0_.brand as brand2_0_, car0_.client_id as client_i5_0_, car0_.model as model3_0_, car0_.rejestracja as rejestra4_0_ from car car0_
+[2019-05-13 18:47:47 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-3] [66] [DEBUG] committing
+[2019-05-13 18:47:47 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-3] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:47:47 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-3] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:47:47 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-3] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:47:47 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-3] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#2], was: [pl.coderslab.client.Client.cars#2] (uninitialized)
+[2019-05-13 18:47:47 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-3] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+[2019-05-13 18:47:47 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-3] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+[2019-05-13 18:47:47 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-3] [102] [DEBUG] Listing entities:
+[2019-05-13 18:47:47 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-3] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Marcin, lastName=Opałka, id=2}
+[2019-05-13 18:47:47 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-3] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:47:49 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-5] [55] [DEBUG] begin
+[2019-05-13 18:47:49 ] [org.hibernate.query.criteria.internal.CriteriaQueryImpl] [http-nio-8080-exec-5] [307] [DEBUG] Rendered criteria query -> select generatedAlias0 from Client as generatedAlias0
+[2019-05-13 18:47:49 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-5] [92] [DEBUG] select client0_.id as id1_1_, client0_.firstname as firstnam2_1_, client0_.lastname as lastname3_1_ from client client0_
+[2019-05-13 18:47:49 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-5] [384] [DEBUG] Result set row: 0
+[2019-05-13 18:47:49 ] [org.hibernate.loader.Loader] [http-nio-8080-exec-5] [1533] [DEBUG] Result row: EntityKey[pl.coderslab.client.Client#1]
+[2019-05-13 18:47:49 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-5] [384] [DEBUG] Result set row: 1
+[2019-05-13 18:47:49 ] [org.hibernate.loader.Loader] [http-nio-8080-exec-5] [1533] [DEBUG] Result row: EntityKey[pl.coderslab.client.Client#2]
+[2019-05-13 18:47:49 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-5] [144] [DEBUG] Resolving associations for [pl.coderslab.client.Client#1]
+[2019-05-13 18:47:49 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-5] [287] [DEBUG] Done materializing entity [pl.coderslab.client.Client#1]
+[2019-05-13 18:47:49 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-5] [144] [DEBUG] Resolving associations for [pl.coderslab.client.Client#2]
+[2019-05-13 18:47:49 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-5] [287] [DEBUG] Done materializing entity [pl.coderslab.client.Client#2]
+[2019-05-13 18:47:49 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-5] [66] [DEBUG] committing
+[2019-05-13 18:47:49 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-5] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:47:49 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-5] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:47:49 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-5] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:47:49 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-5] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#2], was: [pl.coderslab.client.Client.cars#2] (uninitialized)
+[2019-05-13 18:47:49 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-5] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+[2019-05-13 18:47:49 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-5] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+[2019-05-13 18:47:49 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-5] [102] [DEBUG] Listing entities:
+[2019-05-13 18:47:49 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-5] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Marcin, lastName=Opałka, id=2}
+[2019-05-13 18:47:49 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-5] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:48:01 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-7] [55] [DEBUG] begin
+[2019-05-13 18:48:01 ] [org.hibernate.query.criteria.internal.CriteriaQueryImpl] [http-nio-8080-exec-7] [307] [DEBUG] Rendered criteria query -> select generatedAlias0 from Client as generatedAlias0
+[2019-05-13 18:48:01 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-7] [92] [DEBUG] select client0_.id as id1_1_, client0_.firstname as firstnam2_1_, client0_.lastname as lastname3_1_ from client client0_
+[2019-05-13 18:48:01 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-7] [384] [DEBUG] Result set row: 0
+[2019-05-13 18:48:01 ] [org.hibernate.loader.Loader] [http-nio-8080-exec-7] [1533] [DEBUG] Result row: EntityKey[pl.coderslab.client.Client#1]
+[2019-05-13 18:48:01 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-7] [384] [DEBUG] Result set row: 1
+[2019-05-13 18:48:01 ] [org.hibernate.loader.Loader] [http-nio-8080-exec-7] [1533] [DEBUG] Result row: EntityKey[pl.coderslab.client.Client#2]
+[2019-05-13 18:48:01 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-7] [144] [DEBUG] Resolving associations for [pl.coderslab.client.Client#1]
+[2019-05-13 18:48:01 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-7] [287] [DEBUG] Done materializing entity [pl.coderslab.client.Client#1]
+[2019-05-13 18:48:01 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-7] [144] [DEBUG] Resolving associations for [pl.coderslab.client.Client#2]
+[2019-05-13 18:48:01 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-7] [287] [DEBUG] Done materializing entity [pl.coderslab.client.Client#2]
+[2019-05-13 18:48:01 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-7] [66] [DEBUG] committing
+[2019-05-13 18:48:01 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-7] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:48:01 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-7] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:48:01 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-7] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:48:01 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-7] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#2], was: [pl.coderslab.client.Client.cars#2] (uninitialized)
+[2019-05-13 18:48:01 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-7] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+[2019-05-13 18:48:01 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-7] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+[2019-05-13 18:48:01 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-7] [102] [DEBUG] Listing entities:
+[2019-05-13 18:48:01 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-7] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Marcin, lastName=Opałka, id=2}
+[2019-05-13 18:48:01 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-7] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:48:01 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-7] [55] [DEBUG] begin
+[2019-05-13 18:48:01 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-7] [66] [DEBUG] committing
+[2019-05-13 18:48:01 ] [org.hibernate.validator.internal.metadata.descriptor.ConstraintDescriptorImpl] [http-nio-8080-exec-7] [680] [DEBUG] Adding composing constraint: ConstraintDescriptorImpl{annotation=j.v.c.NotNull, payloads=[], hasComposingConstraints=true, isReportAsSingleInvalidConstraint=false, elementType=FIELD, definedOn=DEFINED_LOCALLY, groups=[interface javax.validation.groups.Default], attributes={groups=[Ljava.lang.Class;@1649df09, message={javax.validation.constraints.NotNull.message}, payload=[Ljava.lang.Class;@6bfda9a9}, constraintType=GENERIC, valueUnwrapping=DEFAULT}.
+[2019-05-13 18:48:01 ] [org.hibernate.validator.internal.metadata.descriptor.ConstraintDescriptorImpl] [http-nio-8080-exec-7] [680] [DEBUG] Adding composing constraint: ConstraintDescriptorImpl{annotation=j.v.c.NotNull, payloads=[], hasComposingConstraints=true, isReportAsSingleInvalidConstraint=false, elementType=FIELD, definedOn=DEFINED_LOCALLY, groups=[interface javax.validation.groups.Default], attributes={groups=[Ljava.lang.Class;@139b76c8, message={javax.validation.constraints.NotNull.message}, payload=[Ljava.lang.Class;@27e36171}, constraintType=GENERIC, valueUnwrapping=DEFAULT}.
+[2019-05-13 18:48:01 ] [org.hibernate.validator.internal.metadata.descriptor.ConstraintDescriptorImpl] [http-nio-8080-exec-7] [680] [DEBUG] Adding composing constraint: ConstraintDescriptorImpl{annotation=j.v.c.NotNull, payloads=[], hasComposingConstraints=true, isReportAsSingleInvalidConstraint=false, elementType=FIELD, definedOn=DEFINED_LOCALLY, groups=[interface javax.validation.groups.Default], attributes={groups=[Ljava.lang.Class;@7f8a5313, message={javax.validation.constraints.NotNull.message}, payload=[Ljava.lang.Class;@79bc0daa}, constraintType=GENERIC, valueUnwrapping=DEFAULT}.
+[2019-05-13 18:48:01 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-7] [55] [DEBUG] begin
+[2019-05-13 18:48:01 ] [org.hibernate.engine.spi.ActionQueue] [http-nio-8080-exec-7] [281] [DEBUG] Executing identity-insert immediately
+[2019-05-13 18:48:01 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-7] [92] [DEBUG] insert into car (id, brand, client_id, model, rejestracja) values (null, ?, ?, ?, ?)
+[2019-05-13 18:48:01 ] [org.hibernate.id.IdentifierGeneratorHelper] [http-nio-8080-exec-7] [78] [DEBUG] Natively generated identity: 1
+[2019-05-13 18:48:01 ] [org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl] [http-nio-8080-exec-7] [115] [DEBUG] HHH000387: ResultSet's statement was not registered
+[2019-05-13 18:48:01 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-7] [66] [DEBUG] committing
+[2019-05-13 18:48:01 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-7] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:48:01 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-7] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:48:01 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-7] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:48:01 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-7] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#2], was: [pl.coderslab.client.Client.cars#2] (uninitialized)
+[2019-05-13 18:48:01 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-7] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 3 objects
+[2019-05-13 18:48:01 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-7] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+[2019-05-13 18:48:01 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-7] [102] [DEBUG] Listing entities:
+[2019-05-13 18:48:01 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-7] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Marcin, lastName=Opałka, id=2}
+[2019-05-13 18:48:01 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-7] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:48:01 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-7] [109] [DEBUG] pl.coderslab.car.Car{modelCar=Uno, registrationNumber=WKZ7373, client=pl.coderslab.client.Client#2, id=1, brand=Fiat}
+[2019-05-13 18:48:01 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-8] [55] [DEBUG] begin
+[2019-05-13 18:48:01 ] [org.hibernate.query.criteria.internal.CriteriaQueryImpl] [http-nio-8080-exec-8] [307] [DEBUG] Rendered criteria query -> select generatedAlias0 from Client as generatedAlias0
+[2019-05-13 18:48:01 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-8] [92] [DEBUG] select client0_.id as id1_1_, client0_.firstname as firstnam2_1_, client0_.lastname as lastname3_1_ from client client0_
+[2019-05-13 18:48:01 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-8] [384] [DEBUG] Result set row: 0
+[2019-05-13 18:48:01 ] [org.hibernate.loader.Loader] [http-nio-8080-exec-8] [1533] [DEBUG] Result row: EntityKey[pl.coderslab.client.Client#1]
+[2019-05-13 18:48:01 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-8] [384] [DEBUG] Result set row: 1
+[2019-05-13 18:48:01 ] [org.hibernate.loader.Loader] [http-nio-8080-exec-8] [1533] [DEBUG] Result row: EntityKey[pl.coderslab.client.Client#2]
+[2019-05-13 18:48:01 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-8] [144] [DEBUG] Resolving associations for [pl.coderslab.client.Client#1]
+[2019-05-13 18:48:01 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-8] [287] [DEBUG] Done materializing entity [pl.coderslab.client.Client#1]
+[2019-05-13 18:48:01 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-8] [144] [DEBUG] Resolving associations for [pl.coderslab.client.Client#2]
+[2019-05-13 18:48:01 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-8] [287] [DEBUG] Done materializing entity [pl.coderslab.client.Client#2]
+[2019-05-13 18:48:01 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-8] [66] [DEBUG] committing
+[2019-05-13 18:48:01 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-8] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:48:01 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-8] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:48:01 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-8] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:48:01 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-8] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#2], was: [pl.coderslab.client.Client.cars#2] (uninitialized)
+[2019-05-13 18:48:01 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-8] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+[2019-05-13 18:48:01 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-8] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+[2019-05-13 18:48:01 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-8] [102] [DEBUG] Listing entities:
+[2019-05-13 18:48:01 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-8] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Marcin, lastName=Opałka, id=2}
+[2019-05-13 18:48:01 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-8] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:48:01 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-8] [55] [DEBUG] begin
+[2019-05-13 18:48:01 ] [org.hibernate.query.criteria.internal.CriteriaQueryImpl] [http-nio-8080-exec-8] [307] [DEBUG] Rendered criteria query -> select generatedAlias0 from Car as generatedAlias0
+[2019-05-13 18:48:01 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-8] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:48:01 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-8] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:48:01 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-8] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:48:01 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-8] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#2], was: [pl.coderslab.client.Client.cars#2] (uninitialized)
+[2019-05-13 18:48:01 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-8] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+[2019-05-13 18:48:01 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-8] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+[2019-05-13 18:48:01 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-8] [102] [DEBUG] Listing entities:
+[2019-05-13 18:48:01 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-8] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Marcin, lastName=Opałka, id=2}
+[2019-05-13 18:48:01 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-8] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:48:01 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-8] [92] [DEBUG] select car0_.id as id1_0_, car0_.brand as brand2_0_, car0_.client_id as client_i5_0_, car0_.model as model3_0_, car0_.rejestracja as rejestra4_0_ from car car0_
+[2019-05-13 18:48:01 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-8] [384] [DEBUG] Result set row: 0
+[2019-05-13 18:48:01 ] [org.hibernate.loader.Loader] [http-nio-8080-exec-8] [1533] [DEBUG] Result row: EntityKey[pl.coderslab.car.Car#1]
+[2019-05-13 18:48:01 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-8] [144] [DEBUG] Resolving associations for [pl.coderslab.car.Car#1]
+[2019-05-13 18:48:01 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-8] [287] [DEBUG] Done materializing entity [pl.coderslab.car.Car#1]
+[2019-05-13 18:48:01 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-8] [66] [DEBUG] committing
+[2019-05-13 18:48:01 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-8] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:48:01 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-8] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:48:01 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-8] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:48:01 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-8] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#2], was: [pl.coderslab.client.Client.cars#2] (uninitialized)
+[2019-05-13 18:48:01 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-8] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 3 objects
+[2019-05-13 18:48:01 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-8] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+[2019-05-13 18:48:01 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-8] [102] [DEBUG] Listing entities:
+[2019-05-13 18:48:01 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-8] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Marcin, lastName=Opałka, id=2}
+[2019-05-13 18:48:01 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-8] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:48:01 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-8] [109] [DEBUG] pl.coderslab.car.Car{modelCar=Uno, registrationNumber=WKZ7373, client=pl.coderslab.client.Client#2, id=1, brand=Fiat}
+[2019-05-13 18:48:06 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-10] [55] [DEBUG] begin
+[2019-05-13 18:48:06 ] [org.hibernate.query.criteria.internal.CriteriaQueryImpl] [http-nio-8080-exec-10] [307] [DEBUG] Rendered criteria query -> select generatedAlias0 from Client as generatedAlias0
+[2019-05-13 18:48:06 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-10] [92] [DEBUG] select client0_.id as id1_1_, client0_.firstname as firstnam2_1_, client0_.lastname as lastname3_1_ from client client0_
+[2019-05-13 18:48:06 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-10] [384] [DEBUG] Result set row: 0
+[2019-05-13 18:48:06 ] [org.hibernate.loader.Loader] [http-nio-8080-exec-10] [1533] [DEBUG] Result row: EntityKey[pl.coderslab.client.Client#1]
+[2019-05-13 18:48:06 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-10] [384] [DEBUG] Result set row: 1
+[2019-05-13 18:48:06 ] [org.hibernate.loader.Loader] [http-nio-8080-exec-10] [1533] [DEBUG] Result row: EntityKey[pl.coderslab.client.Client#2]
+[2019-05-13 18:48:06 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-10] [144] [DEBUG] Resolving associations for [pl.coderslab.client.Client#1]
+[2019-05-13 18:48:06 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-10] [287] [DEBUG] Done materializing entity [pl.coderslab.client.Client#1]
+[2019-05-13 18:48:06 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-10] [144] [DEBUG] Resolving associations for [pl.coderslab.client.Client#2]
+[2019-05-13 18:48:06 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-10] [287] [DEBUG] Done materializing entity [pl.coderslab.client.Client#2]
+[2019-05-13 18:48:06 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-10] [66] [DEBUG] committing
+[2019-05-13 18:48:06 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-10] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:48:06 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-10] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:48:06 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-10] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:48:06 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-10] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#2], was: [pl.coderslab.client.Client.cars#2] (uninitialized)
+[2019-05-13 18:48:06 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-10] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+[2019-05-13 18:48:06 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-10] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+[2019-05-13 18:48:06 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-10] [102] [DEBUG] Listing entities:
+[2019-05-13 18:48:06 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-10] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Marcin, lastName=Opałka, id=2}
+[2019-05-13 18:48:06 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-10] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:48:22 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-2] [55] [DEBUG] begin
+[2019-05-13 18:48:22 ] [org.hibernate.query.criteria.internal.CriteriaQueryImpl] [http-nio-8080-exec-2] [307] [DEBUG] Rendered criteria query -> select generatedAlias0 from Client as generatedAlias0
+[2019-05-13 18:48:22 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-2] [92] [DEBUG] select client0_.id as id1_1_, client0_.firstname as firstnam2_1_, client0_.lastname as lastname3_1_ from client client0_
+[2019-05-13 18:48:22 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-2] [384] [DEBUG] Result set row: 0
+[2019-05-13 18:48:22 ] [org.hibernate.loader.Loader] [http-nio-8080-exec-2] [1533] [DEBUG] Result row: EntityKey[pl.coderslab.client.Client#1]
+[2019-05-13 18:48:22 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-2] [384] [DEBUG] Result set row: 1
+[2019-05-13 18:48:22 ] [org.hibernate.loader.Loader] [http-nio-8080-exec-2] [1533] [DEBUG] Result row: EntityKey[pl.coderslab.client.Client#2]
+[2019-05-13 18:48:22 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-2] [144] [DEBUG] Resolving associations for [pl.coderslab.client.Client#1]
+[2019-05-13 18:48:22 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-2] [287] [DEBUG] Done materializing entity [pl.coderslab.client.Client#1]
+[2019-05-13 18:48:22 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-2] [144] [DEBUG] Resolving associations for [pl.coderslab.client.Client#2]
+[2019-05-13 18:48:22 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-2] [287] [DEBUG] Done materializing entity [pl.coderslab.client.Client#2]
+[2019-05-13 18:48:22 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-2] [66] [DEBUG] committing
+[2019-05-13 18:48:22 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-2] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:48:22 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-2] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:48:22 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-2] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:48:22 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-2] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#2], was: [pl.coderslab.client.Client.cars#2] (uninitialized)
+[2019-05-13 18:48:22 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-2] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+[2019-05-13 18:48:22 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-2] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+[2019-05-13 18:48:22 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-2] [102] [DEBUG] Listing entities:
+[2019-05-13 18:48:22 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-2] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Marcin, lastName=Opałka, id=2}
+[2019-05-13 18:48:22 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-2] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:48:22 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-2] [55] [DEBUG] begin
+[2019-05-13 18:48:22 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-2] [66] [DEBUG] committing
+[2019-05-13 18:48:22 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-2] [55] [DEBUG] begin
+[2019-05-13 18:48:22 ] [org.hibernate.engine.spi.ActionQueue] [http-nio-8080-exec-2] [281] [DEBUG] Executing identity-insert immediately
+[2019-05-13 18:48:22 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-2] [92] [DEBUG] insert into car (id, brand, client_id, model, rejestracja) values (null, ?, ?, ?, ?)
+[2019-05-13 18:48:22 ] [org.hibernate.id.IdentifierGeneratorHelper] [http-nio-8080-exec-2] [78] [DEBUG] Natively generated identity: 2
+[2019-05-13 18:48:22 ] [org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl] [http-nio-8080-exec-2] [115] [DEBUG] HHH000387: ResultSet's statement was not registered
+[2019-05-13 18:48:22 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-2] [66] [DEBUG] committing
+[2019-05-13 18:48:22 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-2] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:48:22 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-2] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:48:22 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-2] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:48:22 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-2] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#2], was: [pl.coderslab.client.Client.cars#2] (uninitialized)
+[2019-05-13 18:48:22 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-2] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 3 objects
+[2019-05-13 18:48:22 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-2] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+[2019-05-13 18:48:22 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-2] [102] [DEBUG] Listing entities:
+[2019-05-13 18:48:22 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-2] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Marcin, lastName=Opałka, id=2}
+[2019-05-13 18:48:22 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-2] [109] [DEBUG] pl.coderslab.car.Car{modelCar=A4, registrationNumber=Lka45454, client=pl.coderslab.client.Client#2, id=2, brand=Audi}
+[2019-05-13 18:48:22 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-2] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:48:22 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-3] [55] [DEBUG] begin
+[2019-05-13 18:48:22 ] [org.hibernate.query.criteria.internal.CriteriaQueryImpl] [http-nio-8080-exec-3] [307] [DEBUG] Rendered criteria query -> select generatedAlias0 from Client as generatedAlias0
+[2019-05-13 18:48:22 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-3] [92] [DEBUG] select client0_.id as id1_1_, client0_.firstname as firstnam2_1_, client0_.lastname as lastname3_1_ from client client0_
+[2019-05-13 18:48:22 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-3] [384] [DEBUG] Result set row: 0
+[2019-05-13 18:48:22 ] [org.hibernate.loader.Loader] [http-nio-8080-exec-3] [1533] [DEBUG] Result row: EntityKey[pl.coderslab.client.Client#1]
+[2019-05-13 18:48:22 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-3] [384] [DEBUG] Result set row: 1
+[2019-05-13 18:48:22 ] [org.hibernate.loader.Loader] [http-nio-8080-exec-3] [1533] [DEBUG] Result row: EntityKey[pl.coderslab.client.Client#2]
+[2019-05-13 18:48:22 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-3] [144] [DEBUG] Resolving associations for [pl.coderslab.client.Client#1]
+[2019-05-13 18:48:22 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-3] [287] [DEBUG] Done materializing entity [pl.coderslab.client.Client#1]
+[2019-05-13 18:48:22 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-3] [144] [DEBUG] Resolving associations for [pl.coderslab.client.Client#2]
+[2019-05-13 18:48:22 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-3] [287] [DEBUG] Done materializing entity [pl.coderslab.client.Client#2]
+[2019-05-13 18:48:22 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-3] [66] [DEBUG] committing
+[2019-05-13 18:48:22 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-3] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:48:22 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-3] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:48:22 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-3] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:48:22 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-3] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#2], was: [pl.coderslab.client.Client.cars#2] (uninitialized)
+[2019-05-13 18:48:22 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-3] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+[2019-05-13 18:48:22 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-3] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+[2019-05-13 18:48:22 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-3] [102] [DEBUG] Listing entities:
+[2019-05-13 18:48:22 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-3] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Marcin, lastName=Opałka, id=2}
+[2019-05-13 18:48:22 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-3] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:48:22 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-3] [55] [DEBUG] begin
+[2019-05-13 18:48:22 ] [org.hibernate.query.criteria.internal.CriteriaQueryImpl] [http-nio-8080-exec-3] [307] [DEBUG] Rendered criteria query -> select generatedAlias0 from Car as generatedAlias0
+[2019-05-13 18:48:22 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-3] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:48:22 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-3] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:48:22 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-3] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:48:22 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-3] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#2], was: [pl.coderslab.client.Client.cars#2] (uninitialized)
+[2019-05-13 18:48:22 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-3] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+[2019-05-13 18:48:22 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-3] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+[2019-05-13 18:48:22 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-3] [102] [DEBUG] Listing entities:
+[2019-05-13 18:48:22 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-3] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Marcin, lastName=Opałka, id=2}
+[2019-05-13 18:48:22 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-3] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:48:22 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-3] [92] [DEBUG] select car0_.id as id1_0_, car0_.brand as brand2_0_, car0_.client_id as client_i5_0_, car0_.model as model3_0_, car0_.rejestracja as rejestra4_0_ from car car0_
+[2019-05-13 18:48:22 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-3] [384] [DEBUG] Result set row: 0
+[2019-05-13 18:48:22 ] [org.hibernate.loader.Loader] [http-nio-8080-exec-3] [1533] [DEBUG] Result row: EntityKey[pl.coderslab.car.Car#1]
+[2019-05-13 18:48:22 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-3] [384] [DEBUG] Result set row: 1
+[2019-05-13 18:48:22 ] [org.hibernate.loader.Loader] [http-nio-8080-exec-3] [1533] [DEBUG] Result row: EntityKey[pl.coderslab.car.Car#2]
+[2019-05-13 18:48:22 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-3] [144] [DEBUG] Resolving associations for [pl.coderslab.car.Car#1]
+[2019-05-13 18:48:22 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-3] [287] [DEBUG] Done materializing entity [pl.coderslab.car.Car#1]
+[2019-05-13 18:48:22 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-3] [144] [DEBUG] Resolving associations for [pl.coderslab.car.Car#2]
+[2019-05-13 18:48:22 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-3] [287] [DEBUG] Done materializing entity [pl.coderslab.car.Car#2]
+[2019-05-13 18:48:22 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-3] [66] [DEBUG] committing
+[2019-05-13 18:48:22 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-3] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:48:22 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-3] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:48:22 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-3] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:48:22 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-3] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#2], was: [pl.coderslab.client.Client.cars#2] (uninitialized)
+[2019-05-13 18:48:22 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-3] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 4 objects
+[2019-05-13 18:48:22 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-3] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+[2019-05-13 18:48:22 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-3] [102] [DEBUG] Listing entities:
+[2019-05-13 18:48:22 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-3] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Marcin, lastName=Opałka, id=2}
+[2019-05-13 18:48:22 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-3] [109] [DEBUG] pl.coderslab.car.Car{modelCar=A4, registrationNumber=Lka45454, client=pl.coderslab.client.Client#2, id=2, brand=Audi}
+[2019-05-13 18:48:22 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-3] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:48:22 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-3] [109] [DEBUG] pl.coderslab.car.Car{modelCar=Uno, registrationNumber=WKZ7373, client=pl.coderslab.client.Client#2, id=1, brand=Fiat}
+[2019-05-13 18:49:20 ] [pl.coderslab.mainController.MainPageController] [http-nio-8080-exec-5] [18] [INFO ] **** WYWOŁANO > showMainPage()
+[2019-05-13 18:49:23 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-7] [55] [DEBUG] begin
+[2019-05-13 18:49:23 ] [org.hibernate.query.criteria.internal.CriteriaQueryImpl] [http-nio-8080-exec-7] [307] [DEBUG] Rendered criteria query -> select generatedAlias0 from Client as generatedAlias0
+[2019-05-13 18:49:23 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-7] [92] [DEBUG] select client0_.id as id1_1_, client0_.firstname as firstnam2_1_, client0_.lastname as lastname3_1_ from client client0_
+[2019-05-13 18:49:23 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-7] [384] [DEBUG] Result set row: 0
+[2019-05-13 18:49:23 ] [org.hibernate.loader.Loader] [http-nio-8080-exec-7] [1533] [DEBUG] Result row: EntityKey[pl.coderslab.client.Client#1]
+[2019-05-13 18:49:23 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-7] [384] [DEBUG] Result set row: 1
+[2019-05-13 18:49:23 ] [org.hibernate.loader.Loader] [http-nio-8080-exec-7] [1533] [DEBUG] Result row: EntityKey[pl.coderslab.client.Client#2]
+[2019-05-13 18:49:23 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-7] [144] [DEBUG] Resolving associations for [pl.coderslab.client.Client#1]
+[2019-05-13 18:49:23 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-7] [287] [DEBUG] Done materializing entity [pl.coderslab.client.Client#1]
+[2019-05-13 18:49:23 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-7] [144] [DEBUG] Resolving associations for [pl.coderslab.client.Client#2]
+[2019-05-13 18:49:23 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-7] [287] [DEBUG] Done materializing entity [pl.coderslab.client.Client#2]
+[2019-05-13 18:49:23 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-7] [66] [DEBUG] committing
+[2019-05-13 18:49:23 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-7] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:49:23 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-7] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:49:23 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-7] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:49:23 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-7] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#2], was: [pl.coderslab.client.Client.cars#2] (uninitialized)
+[2019-05-13 18:49:23 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-7] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+[2019-05-13 18:49:23 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-7] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+[2019-05-13 18:49:23 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-7] [102] [DEBUG] Listing entities:
+[2019-05-13 18:49:23 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-7] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Marcin, lastName=Opałka, id=2}
+[2019-05-13 18:49:23 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-7] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:49:23 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-7] [55] [DEBUG] begin
+[2019-05-13 18:49:23 ] [org.hibernate.query.criteria.internal.CriteriaQueryImpl] [http-nio-8080-exec-7] [307] [DEBUG] Rendered criteria query -> select generatedAlias0 from Car as generatedAlias0
+[2019-05-13 18:49:23 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-7] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:49:23 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-7] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:49:23 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-7] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:49:23 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-7] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#2], was: [pl.coderslab.client.Client.cars#2] (uninitialized)
+[2019-05-13 18:49:23 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-7] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+[2019-05-13 18:49:23 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-7] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+[2019-05-13 18:49:23 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-7] [102] [DEBUG] Listing entities:
+[2019-05-13 18:49:23 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-7] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Marcin, lastName=Opałka, id=2}
+[2019-05-13 18:49:23 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-7] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:49:23 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-7] [92] [DEBUG] select car0_.id as id1_0_, car0_.brand as brand2_0_, car0_.client_id as client_i5_0_, car0_.model as model3_0_, car0_.rejestracja as rejestra4_0_ from car car0_
+[2019-05-13 18:49:23 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-7] [384] [DEBUG] Result set row: 0
+[2019-05-13 18:49:23 ] [org.hibernate.loader.Loader] [http-nio-8080-exec-7] [1533] [DEBUG] Result row: EntityKey[pl.coderslab.car.Car#1]
+[2019-05-13 18:49:23 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-7] [384] [DEBUG] Result set row: 1
+[2019-05-13 18:49:23 ] [org.hibernate.loader.Loader] [http-nio-8080-exec-7] [1533] [DEBUG] Result row: EntityKey[pl.coderslab.car.Car#2]
+[2019-05-13 18:49:23 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-7] [144] [DEBUG] Resolving associations for [pl.coderslab.car.Car#1]
+[2019-05-13 18:49:23 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-7] [287] [DEBUG] Done materializing entity [pl.coderslab.car.Car#1]
+[2019-05-13 18:49:23 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-7] [144] [DEBUG] Resolving associations for [pl.coderslab.car.Car#2]
+[2019-05-13 18:49:23 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-7] [287] [DEBUG] Done materializing entity [pl.coderslab.car.Car#2]
+[2019-05-13 18:49:23 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-7] [66] [DEBUG] committing
+[2019-05-13 18:49:23 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-7] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:49:23 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-7] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:49:23 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-7] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:49:23 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-7] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#2], was: [pl.coderslab.client.Client.cars#2] (uninitialized)
+[2019-05-13 18:49:23 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-7] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 4 objects
+[2019-05-13 18:49:23 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-7] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+[2019-05-13 18:49:23 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-7] [102] [DEBUG] Listing entities:
+[2019-05-13 18:49:23 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-7] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Marcin, lastName=Opałka, id=2}
+[2019-05-13 18:49:23 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-7] [109] [DEBUG] pl.coderslab.car.Car{modelCar=A4, registrationNumber=Lka45454, client=pl.coderslab.client.Client#2, id=2, brand=Audi}
+[2019-05-13 18:49:23 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-7] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:49:23 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-7] [109] [DEBUG] pl.coderslab.car.Car{modelCar=Uno, registrationNumber=WKZ7373, client=pl.coderslab.client.Client#2, id=1, brand=Fiat}
+[2019-05-13 18:49:23 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-7] [55] [DEBUG] begin
+[2019-05-13 18:49:23 ] [org.hibernate.query.criteria.internal.CriteriaQueryImpl] [http-nio-8080-exec-7] [307] [DEBUG] Rendered criteria query -> select generatedAlias0 from Client as generatedAlias0
+[2019-05-13 18:49:23 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-7] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:49:23 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-7] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:49:23 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-7] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:49:23 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-7] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#2], was: [pl.coderslab.client.Client.cars#2] (uninitialized)
+[2019-05-13 18:49:23 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-7] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 4 objects
+[2019-05-13 18:49:23 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-7] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+[2019-05-13 18:49:23 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-7] [102] [DEBUG] Listing entities:
+[2019-05-13 18:49:23 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-7] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Marcin, lastName=Opałka, id=2}
+[2019-05-13 18:49:23 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-7] [109] [DEBUG] pl.coderslab.car.Car{modelCar=A4, registrationNumber=Lka45454, client=pl.coderslab.client.Client#2, id=2, brand=Audi}
+[2019-05-13 18:49:23 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-7] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:49:23 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-7] [109] [DEBUG] pl.coderslab.car.Car{modelCar=Uno, registrationNumber=WKZ7373, client=pl.coderslab.client.Client#2, id=1, brand=Fiat}
+[2019-05-13 18:49:23 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-7] [92] [DEBUG] select client0_.id as id1_1_, client0_.firstname as firstnam2_1_, client0_.lastname as lastname3_1_ from client client0_
+[2019-05-13 18:49:23 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-7] [384] [DEBUG] Result set row: 0
+[2019-05-13 18:49:23 ] [org.hibernate.loader.Loader] [http-nio-8080-exec-7] [1533] [DEBUG] Result row: EntityKey[pl.coderslab.client.Client#1]
+[2019-05-13 18:49:23 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-7] [384] [DEBUG] Result set row: 1
+[2019-05-13 18:49:23 ] [org.hibernate.loader.Loader] [http-nio-8080-exec-7] [1533] [DEBUG] Result row: EntityKey[pl.coderslab.client.Client#2]
+[2019-05-13 18:49:23 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-7] [66] [DEBUG] committing
+[2019-05-13 18:49:23 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-7] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:49:23 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-7] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:49:23 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-7] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:49:23 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-7] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#2], was: [pl.coderslab.client.Client.cars#2] (uninitialized)
+[2019-05-13 18:49:23 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-7] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 4 objects
+[2019-05-13 18:49:23 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-7] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+[2019-05-13 18:49:23 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-7] [102] [DEBUG] Listing entities:
+[2019-05-13 18:49:23 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-7] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Marcin, lastName=Opałka, id=2}
+[2019-05-13 18:49:23 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-7] [109] [DEBUG] pl.coderslab.car.Car{modelCar=A4, registrationNumber=Lka45454, client=pl.coderslab.client.Client#2, id=2, brand=Audi}
+[2019-05-13 18:49:23 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-7] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:49:23 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-7] [109] [DEBUG] pl.coderslab.car.Car{modelCar=Uno, registrationNumber=WKZ7373, client=pl.coderslab.client.Client#2, id=1, brand=Fiat}
+[2019-05-13 18:49:27 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-9] [55] [DEBUG] begin
+[2019-05-13 18:49:27 ] [org.hibernate.query.criteria.internal.CriteriaQueryImpl] [http-nio-8080-exec-9] [307] [DEBUG] Rendered criteria query -> select generatedAlias0 from Client as generatedAlias0
+[2019-05-13 18:49:27 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-9] [92] [DEBUG] select client0_.id as id1_1_, client0_.firstname as firstnam2_1_, client0_.lastname as lastname3_1_ from client client0_
+[2019-05-13 18:49:27 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-9] [384] [DEBUG] Result set row: 0
+[2019-05-13 18:49:27 ] [org.hibernate.loader.Loader] [http-nio-8080-exec-9] [1533] [DEBUG] Result row: EntityKey[pl.coderslab.client.Client#1]
+[2019-05-13 18:49:27 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-9] [384] [DEBUG] Result set row: 1
+[2019-05-13 18:49:27 ] [org.hibernate.loader.Loader] [http-nio-8080-exec-9] [1533] [DEBUG] Result row: EntityKey[pl.coderslab.client.Client#2]
+[2019-05-13 18:49:27 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-9] [144] [DEBUG] Resolving associations for [pl.coderslab.client.Client#1]
+[2019-05-13 18:49:27 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-9] [287] [DEBUG] Done materializing entity [pl.coderslab.client.Client#1]
+[2019-05-13 18:49:27 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-9] [144] [DEBUG] Resolving associations for [pl.coderslab.client.Client#2]
+[2019-05-13 18:49:27 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-9] [287] [DEBUG] Done materializing entity [pl.coderslab.client.Client#2]
+[2019-05-13 18:49:27 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-9] [66] [DEBUG] committing
+[2019-05-13 18:49:27 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-9] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:49:27 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-9] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:49:27 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-9] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:49:27 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-9] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#2], was: [pl.coderslab.client.Client.cars#2] (uninitialized)
+[2019-05-13 18:49:27 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-9] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+[2019-05-13 18:49:27 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-9] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+[2019-05-13 18:49:27 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-9] [102] [DEBUG] Listing entities:
+[2019-05-13 18:49:27 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-9] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Marcin, lastName=Opałka, id=2}
+[2019-05-13 18:49:27 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-9] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:49:27 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-9] [55] [DEBUG] begin
+[2019-05-13 18:49:27 ] [org.hibernate.query.criteria.internal.CriteriaQueryImpl] [http-nio-8080-exec-9] [307] [DEBUG] Rendered criteria query -> select generatedAlias0 from Car as generatedAlias0 left join generatedAlias0.client as generatedAlias1 where generatedAlias1.id=:param0
+[2019-05-13 18:49:27 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-9] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:49:27 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-9] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:49:27 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-9] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:49:27 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-9] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#2], was: [pl.coderslab.client.Client.cars#2] (uninitialized)
+[2019-05-13 18:49:27 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-9] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+[2019-05-13 18:49:27 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-9] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+[2019-05-13 18:49:27 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-9] [102] [DEBUG] Listing entities:
+[2019-05-13 18:49:27 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-9] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Marcin, lastName=Opałka, id=2}
+[2019-05-13 18:49:27 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-9] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:49:27 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [http-nio-8080-exec-9] [92] [DEBUG] select car0_.id as id1_0_, car0_.brand as brand2_0_, car0_.client_id as client_i5_0_, car0_.model as model3_0_, car0_.rejestracja as rejestra4_0_ from car car0_ left outer join client client1_ on car0_.client_id=client1_.id where client1_.id=?
+[2019-05-13 18:49:27 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-9] [384] [DEBUG] Result set row: 0
+[2019-05-13 18:49:27 ] [org.hibernate.loader.Loader] [http-nio-8080-exec-9] [1533] [DEBUG] Result row: EntityKey[pl.coderslab.car.Car#1]
+[2019-05-13 18:49:27 ] [org.jboss.logging.DelegatingBasicLogger] [http-nio-8080-exec-9] [384] [DEBUG] Result set row: 1
+[2019-05-13 18:49:27 ] [org.hibernate.loader.Loader] [http-nio-8080-exec-9] [1533] [DEBUG] Result row: EntityKey[pl.coderslab.car.Car#2]
+[2019-05-13 18:49:27 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-9] [144] [DEBUG] Resolving associations for [pl.coderslab.car.Car#1]
+[2019-05-13 18:49:27 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-9] [287] [DEBUG] Done materializing entity [pl.coderslab.car.Car#1]
+[2019-05-13 18:49:27 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-9] [144] [DEBUG] Resolving associations for [pl.coderslab.car.Car#2]
+[2019-05-13 18:49:27 ] [org.hibernate.engine.internal.TwoPhaseLoad] [http-nio-8080-exec-9] [287] [DEBUG] Done materializing entity [pl.coderslab.car.Car#2]
+[2019-05-13 18:49:27 ] [org.hibernate.engine.transaction.internal.TransactionImpl] [http-nio-8080-exec-9] [66] [DEBUG] committing
+[2019-05-13 18:49:27 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-9] [132] [DEBUG] Processing flush-time cascades
+[2019-05-13 18:49:27 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-9] [174] [DEBUG] Dirty checking collections
+[2019-05-13 18:49:27 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-9] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#1], was: [pl.coderslab.client.Client.cars#1] (uninitialized)
+[2019-05-13 18:49:27 ] [org.hibernate.engine.internal.Collections] [http-nio-8080-exec-9] [206] [DEBUG] Collection found: [pl.coderslab.client.Client.cars#2], was: [pl.coderslab.client.Client.cars#2] (uninitialized)
+[2019-05-13 18:49:27 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-9] [106] [DEBUG] Flushed: 0 insertions, 0 updates, 0 deletions to 4 objects
+[2019-05-13 18:49:27 ] [org.hibernate.event.internal.AbstractFlushingEventListener] [http-nio-8080-exec-9] [113] [DEBUG] Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+[2019-05-13 18:49:27 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-9] [102] [DEBUG] Listing entities:
+[2019-05-13 18:49:27 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-9] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Marcin, lastName=Opałka, id=2}
+[2019-05-13 18:49:27 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-9] [109] [DEBUG] pl.coderslab.car.Car{modelCar=A4, registrationNumber=Lka45454, client=pl.coderslab.client.Client#2, id=2, brand=Audi}
+[2019-05-13 18:49:27 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-9] [109] [DEBUG] pl.coderslab.client.Client{cars=<uninitialized>, firstName=Paweł, lastName=Taranek, id=1}
+[2019-05-13 18:49:27 ] [org.hibernate.internal.util.EntityPrinter] [http-nio-8080-exec-9] [109] [DEBUG] pl.coderslab.car.Car{modelCar=Uno, registrationNumber=WKZ7373, client=pl.coderslab.client.Client#2, id=1, brand=Fiat}
+[2019-05-13 18:49:37 ] [pl.coderslab.mainController.MainPageController] [http-nio-8080-exec-1] [18] [INFO ] **** WYWOŁANO > showMainPage()
+[2019-05-13 19:09:01 ] [org.springframework.context.support.AbstractApplicationContext] [Thread-27] [993] [INFO ] Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@41d5cc60: startup date [Thu May 09 09:01:26 EDT 2019]; root of context hierarchy
+[2019-05-13 19:09:01 ] [org.springframework.jmx.export.MBeanExporter] [Thread-27] [451] [INFO ] Unregistering JMX-exposed beans on shutdown
+[2019-05-13 19:09:01 ] [org.springframework.jmx.support.MBeanRegistrationSupport] [Thread-27] [185] [INFO ] Unregistering JMX-exposed beans
+[2019-05-13 19:09:01 ] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [Thread-27] [597] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2019-05-13 19:09:01 ] [org.hibernate.internal.SessionFactoryImpl] [Thread-27] [741] [DEBUG] HHH000031: Closing
+[2019-05-13 19:09:01 ] [org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl] [Thread-27] [524] [INFO ] HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+[2019-05-13 19:09:01 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [Thread-27] [92] [DEBUG] drop table car if exists
+[2019-05-13 19:09:01 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [Thread-27] [92] [DEBUG] drop table client if exists
+[2019-05-13 19:09:01 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [Thread-27] [92] [DEBUG] drop table role if exists
+[2019-05-13 19:09:01 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [Thread-27] [92] [DEBUG] drop table user if exists
+[2019-05-13 19:09:01 ] [org.hibernate.engine.jdbc.spi.SqlStatementLogger] [Thread-27] [92] [DEBUG] drop table user_role if exists
+[2019-05-13 19:09:01 ] [org.hibernate.engine.spi.CascadeStyles] [Thread-27] [268] [DEBUG] External cascade style registration [persist : STYLE_PERSIST] overrode base registration [STYLE_PERSIST_SKIPLAZY]
+[2019-05-13 19:09:01 ] [org.hibernate.service.internal.AbstractServiceRegistryImpl] [Thread-27] [414] [DEBUG] Implicitly destroying ServiceRegistry on de-registration of all child ServiceRegistries
+[2019-05-13 19:09:01 ] [org.hibernate.boot.registry.internal.BootstrapServiceRegistryImpl] [Thread-27] [295] [DEBUG] Implicitly destroying Boot-strap registry on de-registration of all child ServiceRegistries
+[2019-05-13 19:09:01 ] [org.springframework.beans.factory.support.DisposableBeanAdapter] [Thread-27] [265] [WARN ] Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Baza danych jest już zamknięta (aby zablokować samoczynne zamykanie podczas zamknięcia VM dodaj ";DB_CLOSE_ON_EXIT=FALSE" do URL bazy danych)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-199]
+[2019-05-13 19:09:01 ] [com.zaxxer.hikari.HikariDataSource] [Thread-27] [381] [INFO ] HikariPool-4 - Shutdown initiated...
+[2019-05-13 19:09:01 ] [com.zaxxer.hikari.HikariDataSource] [Thread-27] [383] [INFO ] HikariPool-4 - Shutdown completed.
